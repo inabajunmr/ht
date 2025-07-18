@@ -60,16 +60,16 @@ func runHybridTransport(ctx context.Context, transport *ctap2.HybridTransport) e
 		return fmt.Errorf("failed to display QR code: %w", err)
 	}
 
-	// Step 2: Start BLE advertising
-	bleAdv, err := ble.NewAdvertiser(qrData.QRSecret)
+	// Step 2: Start BLE scanning for CTAP2 hybrid transport
+	bleScanner, err := ble.NewScanner(qrData.QRSecret)
 	if err != nil {
-		return fmt.Errorf("failed to create BLE advertiser: %w", err)
+		return fmt.Errorf("failed to create BLE scanner: %w", err)
 	}
 
-	if err := bleAdv.Start(ctx); err != nil {
-		return fmt.Errorf("failed to start BLE advertising: %w", err)
+	if err := bleScanner.StartScanning(ctx); err != nil {
+		return fmt.Errorf("failed to start BLE scanning: %w", err)
 	}
-	defer bleAdv.Stop()
+	defer bleScanner.StopScanning()
 
 	// Step 3: Setup tunnel service
 	tunnelClient, err := tunnel.NewClient(qrData.TunnelURL, qrData.PrivateKey)

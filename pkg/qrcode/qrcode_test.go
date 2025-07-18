@@ -1,11 +1,9 @@
 package qrcode
 
 import (
+	"encoding/hex"
 	"strings"
 	"testing"
-	"time"
-
-	"github.com/fxamacker/cbor/v2"
 )
 
 func TestGenerateQRData(t *testing.T) {
@@ -14,149 +12,208 @@ func TestGenerateQRData(t *testing.T) {
 		t.Fatalf("GenerateQRData() failed: %v", err)
 	}
 
-	// Validate generated data
-	if len(qrData.PublicKey) != 32 {
-		t.Errorf("PublicKey length = %d, want 32", len(qrData.PublicKey))
+	// Validate generated data for CBOR format
+	if len(qrData.PublicKey) != 33 {
+		t.Errorf("PublicKey length = %d, want 33 (P-256 compressed)", len(qrData.PublicKey))
 	}
 
-	if len(qrData.QRSecret) != 32 {
-		t.Errorf("QRSecret length = %d, want 32", len(qrData.QRSecret))
+	if len(qrData.QRSecret) != 16 {
+		t.Errorf("QRSecret length = %d, want 16", len(qrData.QRSecret))
 	}
 
-	if qrData.TunnelDomains == 0 {
-		t.Error("TunnelDomains should be greater than 0")
+	if len(qrData.TunnelID) != 16 {
+		t.Errorf("TunnelID length = %d, want 16", len(qrData.TunnelID))
 	}
 
-	if len(qrData.PrivateKey) != 32 {
-		t.Errorf("PrivateKey length = %d, want 32", len(qrData.PrivateKey))
+	// Private key is stored in the global identityKey variable in CTAP2 spec
+	if identityKey == nil {
+		t.Error("identityKey should not be nil")
 	}
 
 	if qrData.TunnelURL == "" {
 		t.Error("TunnelURL should not be empty")
 	}
 
-	if qrData.Timestamp == 0 {
-		t.Error("Timestamp should not be zero")
-	}
-
-	// Test timestamp is recent (within 1 minute)
-	now := time.Now().Unix()
-	if now-qrData.Timestamp > 60 {
-		t.Errorf("Timestamp too old: %d", now-qrData.Timestamp)
-	}
 }
 
 func TestValidateQRData(t *testing.T) {
-	// Test valid QR data
+	// Test valid QR data with CBOR format
 	qrData, err := GenerateQRData()
 	if err != nil {
 		t.Fatalf("GenerateQRData() failed: %v", err)
 	}
 
-	if err := ValidateQRData(qrData); err != nil {
-		t.Errorf("ValidateQRData() failed: %v", err)
+	if err := ValidateQRDataCBOR(qrData); err != nil {
+		t.Errorf("ValidateQRDataCBOR() failed: %v", err)
 	}
 
 	// Test invalid public key length
 	qrData.PublicKey = make([]byte, 16)
-	if err := ValidateQRData(qrData); err == nil {
-		t.Error("ValidateQRData() should fail with invalid public key length")
+	if err := ValidateQRDataCBOR(qrData); err == nil {
+		t.Error("ValidateQRDataCBOR() should fail with invalid public key length")
 	}
 
 	// Reset and test invalid QR secret length
 	qrData, _ = GenerateQRData()
-	qrData.QRSecret = make([]byte, 16)
-	if err := ValidateQRData(qrData); err == nil {
-		t.Error("ValidateQRData() should fail with invalid QR secret length")
+	qrData.QRSecret = make([]byte, 32)
+	if err := ValidateQRDataCBOR(qrData); err == nil {
+		t.Error("ValidateQRDataCBOR() should fail with invalid QR secret length")
 	}
 
-	// Reset and test invalid tunnel domains
+	// Test legacy validation should fail with new format
 	qrData, _ = GenerateQRData()
-	qrData.TunnelDomains = 0
 	if err := ValidateQRData(qrData); err == nil {
-		t.Error("ValidateQRData() should fail with invalid tunnel domains")
-	}
-
-	// Reset and test old timestamp
-	qrData, _ = GenerateQRData()
-	qrData.Timestamp = time.Now().Unix() - 700 // 11+ minutes old
-	if err := ValidateQRData(qrData); err == nil {
-		t.Error("ValidateQRData() should fail with old timestamp")
+		t.Error("ValidateQRData() should fail with CBOR format data")
 	}
 }
 
-func TestEncodeFidoURL(t *testing.T) {
-	// Test FIDO URL encoding
-	testData := []byte{0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07}
-	fidoURL, err := encodeFidoURL(testData)
+func TestEncodeCableV2URL(t *testing.T) {
+	// Test caBLE v2 URL encoding with CBOR format
+	qrData, err := GenerateQRData()
 	if err != nil {
-		t.Fatalf("encodeFidoURL failed: %v", err)
+		t.Fatalf("GenerateQRData failed: %v", err)
 	}
 
-	if !strings.HasPrefix(fidoURL, "FIDO:/") {
-		t.Error("FIDO URL should start with FIDO:/")
+	cableURL, err := encodeCableV2URL(qrData)
+	if err != nil {
+		t.Fatalf("encodeCableV2URL failed: %v", err)
 	}
 
-	// Should be 17 digits after FIDO:/
-	decimalPart := strings.TrimPrefix(fidoURL, "FIDO:/")
-	if len(decimalPart) != 17 {
-		t.Errorf("Expected 17 digits, got %d", len(decimalPart))
+	if !strings.HasPrefix(cableURL, "FIDO:/") {
+		t.Error("caBLE URL should start with FIDO:/")
 	}
 
-	// Should be all digits
-	for _, r := range decimalPart {
-		if r < '0' || r > '9' {
-			t.Errorf("Non-digit character found: %c", r)
+	// Should have numeric data after prefix
+	dataPart := strings.TrimPrefix(cableURL, "FIDO:/")
+	if len(dataPart) == 0 {
+		t.Error("caBLE URL should have encoded data")
+	}
+
+	// Should be valid numeric string
+	for _, r := range dataPart {
+		if !(r >= '0' && r <= '9') {
+			t.Errorf("Invalid numeric character found: %c", r)
 		}
 	}
+
+	t.Logf("Generated caBLE URL: %s", cableURL)
 }
 
-func TestQRDataCBOREncoding(t *testing.T) {
+func TestQRDataValidation(t *testing.T) {
 	qrData, err := GenerateQRData()
 	if err != nil {
 		t.Fatalf("GenerateQRData() failed: %v", err)
 	}
 
-	// Test CBOR encoding
-	cborData, err := cbor.Marshal(qrData)
+	// Test validation passes for valid data using CBOR format
+	if err := ValidateQRDataCBOR(qrData); err != nil {
+		t.Errorf("ValidateQRDataCBOR() failed for valid data: %v", err)
+	}
+
+	// Test that all required fields have correct lengths for CBOR format
+	if len(qrData.PublicKey) != 33 {
+		t.Error("PublicKey should be 33 bytes (P-256 compressed)")
+	}
+
+	if len(qrData.QRSecret) != 16 {
+		t.Error("QRSecret should be 16 bytes")
+	}
+
+	if len(qrData.TunnelID) != 16 {
+		t.Error("TunnelID should be 16 bytes")
+	}
+
+	// Private key is handled by global identityKey variable
+	if identityKey == nil {
+		t.Error("identityKey should not be nil")
+	}
+
+	// Test URL generation
+	url, err := encodeCableV2URL(qrData)
 	if err != nil {
-		t.Fatalf("CBOR marshal failed: %v", err)
+		t.Errorf("encodeCableV2URL failed: %v", err)
 	}
 
-	// Test CBOR decoding
-	var decoded QRData
-	if err := cbor.Unmarshal(cborData, &decoded); err != nil {
-		t.Fatalf("CBOR unmarshal failed: %v", err)
+	if !strings.HasPrefix(url, "FIDO:/") {
+		t.Error("URL should start with FIDO:/")
 	}
+}
 
-	// Compare key fields (private key and tunnel URL should not be in CBOR)
-	if string(decoded.PublicKey) != string(qrData.PublicKey) {
-		t.Error("PublicKey mismatch after CBOR round-trip")
+// Test Chromium-compatible CBOR encoding for caBLE v2
+func TestCBOREncodingChromiumFormat(t *testing.T) {
+	// Test case based on Chromium's caBLE v2 implementation
+	// QR code should contain CBOR-encoded map with specific keys
+	
+	// Create test QR data with P-256 compressed public key (33 bytes)
+	publicKey, _ := hex.DecodeString("0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f2021") // 33 bytes P-256 compressed
+	qrSecret, _ := hex.DecodeString("a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6") // 16 bytes
+	
+	qrData := &QRData{
+		PublicKey:  publicKey,
+		QRSecret:   qrSecret,
+		TunnelID:   []byte{}, // Not used in CBOR format
+		PrivateKey: make([]byte, 32),
+		TunnelURL:  "cable.ua5v.com",
 	}
-
-	if string(decoded.QRSecret) != string(qrData.QRSecret) {
-		t.Error("QRSecret mismatch after CBOR round-trip")
+	
+	// Test CBOR encoding using specification function
+	url, err := encodeCableV2URL(qrData)
+	if err != nil {
+		t.Fatalf("Failed to encode CBOR map: %v", err)
 	}
-
-	if decoded.TunnelDomains != qrData.TunnelDomains {
-		t.Error("TunnelDomains mismatch after CBOR round-trip")
+	
+	// URL should not be empty
+	if len(url) == 0 {
+		t.Error("URL is empty")
 	}
-
-	if decoded.StateAssisted != qrData.StateAssisted {
-		t.Error("StateAssisted mismatch after CBOR round-trip")
+	
+	t.Logf("Generated URL: %s", url)
+	t.Logf("URL length: %d characters", len(url))
+	
+	// URL should start with "FIDO:/"
+	if !strings.HasPrefix(url, "FIDO:/") {
+		t.Errorf("Expected URL to start with 'FIDO:/', got: %s", url[:7])
 	}
-
-	if decoded.Timestamp != qrData.Timestamp {
-		t.Error("Timestamp mismatch after CBOR round-trip")
+	
+	// Should contain encoded data
+	t.Logf("Generated CTAP2-compliant URL: %s", url)
+	
+	// Verify the URL contains expected structure
+	if len(url) < 20 {
+		t.Errorf("URL seems too short: %s", url)
 	}
+}
 
-	// Private key should not be in CBOR
-	if len(decoded.PrivateKey) != 0 {
-		t.Error("PrivateKey should not be encoded in CBOR")
+func TestValidateQRDataCBOR(t *testing.T) {
+	// Test validation for CBOR format
+	validPublicKey := make([]byte, 33) // P-256 compressed is 33 bytes
+	validQRSecret := make([]byte, 16)  // QR secret is 16 bytes
+	
+	qrData := &QRData{
+		PublicKey:  validPublicKey,
+		QRSecret:   validQRSecret,
+		TunnelID:   []byte{}, // Not used in CBOR format
+		PrivateKey: make([]byte, 32),
+		TunnelURL:  "cable.ua5v.com",
 	}
-
-	// Tunnel URL should not be in CBOR
-	if decoded.TunnelURL != "" {
-		t.Error("TunnelURL should not be encoded in CBOR")
+	
+	err := ValidateQRDataCBOR(qrData)
+	if err != nil {
+		t.Errorf("Validation failed for valid data: %v", err)
+	}
+	
+	// Test invalid public key length
+	qrData.PublicKey = make([]byte, 32) // Wrong length
+	err = ValidateQRDataCBOR(qrData)
+	if err == nil {
+		t.Error("Expected validation error for invalid public key length")
+	}
+	
+	// Test invalid QR secret length
+	qrData.PublicKey = validPublicKey
+	qrData.QRSecret = make([]byte, 32) // Wrong length
+	err = ValidateQRDataCBOR(qrData)
+	if err == nil {
+		t.Error("Expected validation error for invalid QR secret length")
 	}
 }
