@@ -93,11 +93,20 @@ func GenerateQRData() (*QRData, error) {
 	// Default tunnel service
 	tunnelURL := "cable.ua5v.com"
 
+	// Extract private key bytes (32 bytes for P-256)
+	privateKeyBytes := identityKey.D.Bytes()
+	// Ensure the private key is exactly 32 bytes by padding with zeros if necessary
+	if len(privateKeyBytes) < 32 {
+		padded := make([]byte, 32)
+		copy(padded[32-len(privateKeyBytes):], privateKeyBytes)
+		privateKeyBytes = padded
+	}
+	
 	qrData := &QRData{
 		PublicKey:  identityKeyCompressed[:],
 		QRSecret:   qrSecret[:],
 		TunnelID:   tunnelID,
-		PrivateKey: nil, // Will be extracted from identityKey if needed
+		PrivateKey: privateKeyBytes,
 		TunnelURL:  tunnelURL,
 	}
 

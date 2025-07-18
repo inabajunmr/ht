@@ -10,7 +10,6 @@ import (
 	"syscall"
 	"time"
 
-	"ctap2-hybrid-transport/pkg/attestation"
 	"ctap2-hybrid-transport/pkg/ble"
 	"ctap2-hybrid-transport/pkg/ctap2"
 	"ctap2-hybrid-transport/pkg/qrcode"
@@ -60,45 +59,45 @@ func runHybridTransport(ctx context.Context, transport *ctap2.HybridTransport) e
 		return fmt.Errorf("failed to display QR code: %w", err)
 	}
 
-	// Step 2: Start BLE scanning for CTAP2 hybrid transport
+	// Step 2: Create BLE scanner 
 	bleScanner, err := ble.NewScanner(qrData.QRSecret)
 	if err != nil {
 		return fmt.Errorf("failed to create BLE scanner: %w", err)
 	}
 
-	if err := bleScanner.StartScanning(ctx); err != nil {
-		return fmt.Errorf("failed to start BLE scanning: %w", err)
+	// Step 3: Wait for BLE advertisement from smartphone
+	fmt.Println("Waiting for smartphone to advertise after QR scan...")
+	
+	// Wait for BLE advertisement with tunnel service information
+	tunnelInfo, err := bleScanner.WaitForTunnelAdvertisement(ctx)
+	if err != nil {
+		return fmt.Errorf("failed to receive tunnel advertisement: %w", err)
 	}
-	defer bleScanner.StopScanning()
-
-	// Step 3: Setup tunnel service
-	tunnelClient, err := tunnel.NewClient(qrData.TunnelURL, qrData.PrivateKey)
+	
+	fmt.Printf("Received tunnel service information:\n")
+	fmt.Printf("  Tunnel URL: %s\n", tunnelInfo.TunnelURL)
+	fmt.Printf("  Routing ID: %x\n", tunnelInfo.RoutingID)
+	fmt.Printf("  Tunnel ID: %x\n", tunnelInfo.TunnelID)
+	fmt.Printf("  Additional Data: %x\n", tunnelInfo.AdditionalData)
+	
+	// Step 4: Setup tunnel service with information from BLE advertisement
+	tunnelClient, err := tunnel.NewClient(tunnelInfo.TunnelURL, qrData.PrivateKey, qrData.PublicKey, qrData.QRSecret)
 	if err != nil {
 		return fmt.Errorf("failed to create tunnel client: %w", err)
 	}
-
-	// Step 4: Wait for connection and handle CTAP2 messages
-	fmt.Println("Waiting for authenticator connection...")
 	
-	conn, err := tunnelClient.WaitForConnection(ctx)
-	if err != nil {
-		return fmt.Errorf("failed to establish tunnel connection: %w", err)
-	}
-	defer conn.Close()
-
-	// Step 5: Handle CTAP2 protocol
-	handler := ctap2.NewHandler(conn, transport.OutputFile)
+	// Update tunnel client with advertisement information
+	tunnelClient.SetTunnelInfo(tunnelInfo.RoutingID, tunnelInfo.TunnelID)
 	
-	attestationData, err := handler.HandleAuthentication(ctx)
-	if err != nil {
-		return fmt.Errorf("failed to handle authentication: %w", err)
-	}
-
-	// Step 6: Save attestation
-	if err := attestation.SaveToFile(attestationData, transport.OutputFile); err != nil {
-		return fmt.Errorf("failed to save attestation: %w", err)
-	}
-
-	fmt.Printf("Attestation saved to: %s\n", transport.OutputFile)
+	fmt.Println("Tunnel service information received, but not connecting (as requested)")
+	fmt.Println("Implementation complete - ready for actual tunnel connection")
+	
+	// TODO: Implement actual tunnel connection and CTAP2 message handling
+	// This would involve:
+	// 1. conn, err := tunnelClient.WaitForConnection(ctx)
+	// 2. handler := ctap2.NewHandler(conn, transport.OutputFile)
+	// 3. attestationData, err := handler.HandleAuthentication(ctx)
+	// 4. attestation.SaveToFile(attestationData, transport.OutputFile)
+	
 	return nil
 }
