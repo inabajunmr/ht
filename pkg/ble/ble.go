@@ -193,23 +193,13 @@ func (s *Scanner) StartScanning(ctx context.Context) error {
 						}
 						log.Printf("Local Name: %s", result.AdvertisementPayload.LocalName())
 						
-						// Try to extract service data for both UUIDs
+						// Service data extraction now handled by WaitForTunnelAdvertisement
 						if fidoServiceFound {
-							if serviceData := s.extractFIDOServiceData(result.AdvertisementPayload); serviceData != nil {
-								log.Printf("FIDO Service Data: %x", serviceData)
-								if err := s.processFIDOAdvertisement(serviceData, result.Address); err != nil {
-									log.Printf("Failed to process FIDO advertisement: %v", err)
-								}
-							}
+							log.Printf("FIDO Service UUID found - will extract service data via ServiceData() method")
 						}
 						
 						if cableServiceFound {
-							if serviceData := s.extractCableServiceData(result.AdvertisementPayload); serviceData != nil {
-								log.Printf("caBLE Service Data: %x", serviceData)
-								if err := s.processCableAdvertisement(serviceData, result.Address); err != nil {
-									log.Printf("Failed to process caBLE advertisement: %v", err)
-								}
-							}
+							log.Printf("caBLE Service UUID found - will extract service data via ServiceData() method")
 						}
 						
 						log.Printf("*** END FIDO/CTAP ADVERTISEMENT ***")
@@ -520,160 +510,18 @@ func (s *Scanner) logDeviceInfo(deviceAddr string, rssi int16, localName string,
 	logFile.WriteString("  Note: Limited to checking specific UUIDs due to TinyGo Bluetooth library constraints\n")
 	logFile.WriteString("        Real devices may advertise additional UUIDs not checked here\n")
 	
-	// Log service data attempts
+	// Log service data extraction capability
 	logFile.WriteString("  Service Data Extraction:\n")
-	if fidoServiceData := s.extractFIDOServiceData(payload); fidoServiceData != nil {
-		logFile.WriteString(fmt.Sprintf("    - FIDO Service Data: %x\n", fidoServiceData))
-	} else {
-		logFile.WriteString("    - FIDO Service Data: Not found\n")
-	}
-	
-	if cableServiceData := s.extractCableServiceData(payload); cableServiceData != nil {
-		logFile.WriteString(fmt.Sprintf("    - caBLE Service Data: %x\n", cableServiceData))
-	} else {
-		logFile.WriteString("    - caBLE Service Data: Not found\n")
-	}
+	logFile.WriteString("    - Service data available via ServiceData() method in TinyGo v0.12.0\n")
 	
 	logFile.WriteString("\n")
 	logFile.Sync() // Ensure data is written immediately
 }
 
-// extractFIDOServiceData extracts FIDO service data from BLE advertisement according to CTAP spec
-func (s *Scanner) extractFIDOServiceData(payload bluetooth.AdvertisementPayload) []byte {
-	// Try to get service data for FIDO service UUID
-	// According to CTAP spec, service data should be:
-	// - First 2 bytes: FIDO Service UUID (0xFFFD)
-	// - Following bytes: flag bytes
-	
-	// Parse the service UUID
-	serviceUUID, err := bluetooth.ParseUUID(FIDOServiceUUID)
-	if err != nil {
-		log.Printf("Failed to parse FIDO service UUID: %v", err)
-		return nil
-	}
-	
-	// Check if we can access service data (implementation dependent)
-	// In a real implementation, this would extract the actual service data
-	// For now, we'll log that we found the service and return a placeholder
-	if payload.HasServiceUUID(serviceUUID) {
-		log.Printf("Found FIDO service UUID, attempting to extract service data...")
-		// Return a placeholder to indicate we found the service
-		// In real implementation, this would extract actual service data with flags
-		return []byte{0xFD, 0xFF, 0x00} // FIDO UUID (little endian) + flags placeholder
-	}
-	
-	return nil
-}
 
-// processFIDOAdvertisement processes a FIDO BLE advertisement according to CTAP spec
-func (s *Scanner) processFIDOAdvertisement(serviceData []byte, address bluetooth.Address) error {
-	log.Printf("Processing FIDO advertisement from %s", address.String())
-	
-	if len(serviceData) < ServiceDataMinLength {
-		return fmt.Errorf("service data too short: expected min %d bytes, got %d", ServiceDataMinLength, len(serviceData))
-	}
-	
-	// According to CTAP spec:
-	// - First 2 bytes: FIDO Service UUID
-	// - Following bytes: flag bytes
-	
-	log.Printf("FIDO service data: %x", serviceData)
-	
-	if len(serviceData) >= 3 {
-		flags := serviceData[2]
-		log.Printf("FIDO flags byte: 0x%02x", flags)
-		
-		if flags&FlagPairingMode != 0 {
-			log.Printf("  - Device is in pairing mode")
-		}
-		if flags&FlagPasskeyReq != 0 {
-			log.Printf("  - Device requires passkey input")
-		}
-	}
-	
-	// TODO: Implement FIDO connection logic
-	// - Connect to GATT service
-	// - Perform CTAP2 handshake
-	// - Handle authentication request
-	
-	return nil
-}
 
-// extractCableServiceData extracts caBLE v2 service data from BLE advertisement
-func (s *Scanner) extractCableServiceData(payload bluetooth.AdvertisementPayload) []byte {
-	// Try to get service data for caBLE service UUID
-	// Note: TinyGo bluetooth library has limited service data access
-	// This is a simplified implementation
-	
-	// Parse the service UUID
-	serviceUUID, err := bluetooth.ParseUUID(CableServiceUUID)
-	if err != nil {
-		log.Printf("Failed to parse service UUID: %v", err)
-		return nil
-	}
-	
-	// Check if we can access service data (implementation dependent)
-	// In a real implementation, this would extract the actual service data
-	// For now, we'll log that we found the service and return a placeholder
-	if payload.HasServiceUUID(serviceUUID) {
-		log.Printf("Found caBLE service UUID, but service data extraction not fully supported by TinyGo")
-		// Return a placeholder to indicate we found the service
-		return []byte{0x01} // Placeholder
-	}
-	
-	return nil
-}
 
-// processCableAdvertisement processes a caBLE v2 BLE advertisement
-func (s *Scanner) processCableAdvertisement(serviceData []byte, address bluetooth.Address) error {
-	log.Printf("Processing caBLE v2 advertisement from %s", address.String())
-	
-	// In a full implementation, this would:
-	// 1. Decrypt the service data using the QR secret
-	// 2. Extract the nonce, routing ID, and tunnel service identifier
-	// 3. Initiate the tunnel connection
-	// 4. Perform the Noise protocol handshake
-	
-	if len(serviceData) < CableV2AdvDataLength {
-		return fmt.Errorf("service data too short: expected %d bytes, got %d", CableV2AdvDataLength, len(serviceData))
-	}
-	
-	log.Printf("caBLE v2 advertisement processing would happen here")
-	log.Printf("Service data length: %d bytes", len(serviceData))
-	log.Printf("QR Secret for decryption: %x", s.qrSecret[:8]) // Show first 8 bytes only
-	
-	// TODO: Implement full caBLE v2 processing:
-	// - Decrypt service data using HKDF derived from QR secret
-	// - Extract nonce, routing ID, tunnel service identifier
-	// - Connect to tunnel service
-	// - Establish secure channel using Noise protocol
-	
-	return nil
-}
 
-// containsBytes checks if haystack contains needle
-func containsBytes(haystack, needle []byte) bool {
-	if len(needle) == 0 {
-		return true
-	}
-	if len(haystack) < len(needle) {
-		return false
-	}
-	
-	for i := 0; i <= len(haystack)-len(needle); i++ {
-		found := true
-		for j := 0; j < len(needle); j++ {
-			if haystack[i+j] != needle[j] {
-				found = false
-				break
-			}
-		}
-		if found {
-			return true
-		}
-	}
-	return false
-}
 
 // WaitForTunnelAdvertisement waits for a BLE advertisement containing tunnel service information
 func (s *Scanner) WaitForTunnelAdvertisement(ctx context.Context) (*TunnelInfo, error) {
@@ -755,97 +603,76 @@ func (s *Scanner) processTunnelAdvertisement(result bluetooth.ScanResult, tunnel
 		log.Printf("Found caBLE service advertisement from device: %s", result.Address.String())
 	}
 	
-	// Extract service data using enhanced method
+	// Extract service data directly using TinyGo Bluetooth v0.12.0 ServiceData() method
 	var serviceData []byte
-	if hasFIDOService {
-		serviceData = s.extractFIDOServiceDataEnhanced(result.AdvertisementPayload)
-	} else if hasCableService {
-		serviceData = s.extractCableServiceDataEnhanced(result.AdvertisementPayload)
-	}
 	
-	// If no service data found using enhanced methods, try fallback
-	if serviceData == nil {
-		serviceData = s.getExtendedServiceDataEnhanced(result)
+	// Get service data entries
+	serviceDataEntries := result.AdvertisementPayload.ServiceData()
+	if len(serviceDataEntries) > 0 {
+		// Parse target UUIDs
+		cableServiceUUID, _ := bluetooth.ParseUUID(CableServiceUUID)
+		fidoServiceUUID, _ := bluetooth.ParseUUID(FIDOServiceUUID)
+		
+		// Find caBLE or FIDO service data
+		for _, entry := range serviceDataEntries {
+			if entry.UUID == cableServiceUUID {
+				log.Printf("Found caBLE service data (UUID 0xFFF9): %x (length: %d)", entry.Data, len(entry.Data))
+				serviceData = entry.Data
+				break
+			} else if entry.UUID == fidoServiceUUID {
+				log.Printf("Found FIDO service data (UUID 0xFFFD): %x (length: %d)", entry.Data, len(entry.Data))
+				serviceData = entry.Data
+				break
+			}
+		}
 	}
 	
 	if serviceData == nil || len(serviceData) < 20 {
 		log.Printf("Service data insufficient for caBLE v2 (got %d bytes, need 20)", len(serviceData))
-		log.Printf("*** CREATING MOCK TUNNEL INFO FOR DEMONSTRATION ***")
-		
-		// For demonstration purposes, create mock tunnel info
-		// In real implementation, this would come from actual service data
-		mockTunnelInfo := &TunnelInfo{
-			TunnelURL:      "cable.ua5v.com",
-			RoutingID:      []byte{0x12, 0x34, 0x56},
-			TunnelID:       []byte{0x78, 0x9a, 0xbc, 0xde, 0xf0, 0x12, 0x34, 0x56, 0x78, 0x9a, 0xbc, 0xde, 0xf0, 0x12, 0x34, 0x56},
-			AdditionalData: []byte{0xaa, 0xbb, 0xcc, 0xdd},
-		}
-		
-		log.Printf("*** TUNNEL SERVICE INFORMATION (MOCK) ***")
-		log.Printf("  Device: %s", result.Address.String())
-		log.Printf("  Tunnel URL: %s", mockTunnelInfo.TunnelURL)
-		log.Printf("  Routing ID: %x", mockTunnelInfo.RoutingID)
-		log.Printf("  Tunnel ID: %x", mockTunnelInfo.TunnelID)
-		log.Printf("  Additional Data: %x", mockTunnelInfo.AdditionalData)
-		log.Printf("*** END TUNNEL SERVICE INFORMATION ***")
-		
-		// Send tunnel info to channel
-		select {
-		case tunnelInfoChan <- mockTunnelInfo:
-			return true
-		default:
-			return false
-		}
+		return false
 	}
 	
 	log.Printf("Service data length: %d bytes", len(serviceData))
-	log.Printf("Service data: %x", serviceData)
+	log.Printf("Service data (encrypted): %x", serviceData)
 	
-	// Parse caBLE v2 advertisement data according to CTAP2 specification
-	if len(serviceData) >= 20 { // caBLE v2 service data should be 20 bytes
-		// Extract tunnel service information from advertisement
-		// Based on caBLE v2 specification format:
-		// [8 bytes nonce] + [3 bytes routing ID] + [2 bytes tunnel service] + [additional data]
-		
-		nonce := serviceData[0:8]
-		routingID := serviceData[8:11]
-		tunnelService := serviceData[11:13]
-		additionalData := serviceData[13:]
-		
-		log.Printf("Parsed caBLE v2 advertisement:")
-		log.Printf("  Nonce: %x", nonce)
-		log.Printf("  Routing ID: %x", routingID)
-		log.Printf("  Tunnel Service: %x", tunnelService)
-		log.Printf("  Additional Data: %x", additionalData)
-		
-		// Map tunnel service identifier to URL
-		tunnelURL := s.getTunnelURL(tunnelService)
-		
-		// Generate tunnel ID (would normally be derived from nonce and other data)
-		tunnelID := make([]byte, 16)
-		copy(tunnelID, nonce)
-		// Pad with additional data if needed
-		if len(additionalData) > 0 {
-			copy(tunnelID[8:], additionalData)
-		}
-		
-		tunnelInfo := &TunnelInfo{
-			TunnelURL:      tunnelURL,
-			RoutingID:      routingID,
-			TunnelID:       tunnelID,
-			AdditionalData: additionalData,
-		}
-		
-		// Send tunnel info to channel
-		select {
-		case tunnelInfoChan <- tunnelInfo:
-			return true
-		default:
-			return false
-		}
+	// TODO: Decrypt caBLE v2 service data using QR secret
+	// For now, parse as-is (encrypted data) for demonstration
+	nonce := serviceData[0:8]
+	routingID := serviceData[8:11]
+	tunnelService := serviceData[11:13]
+	additionalData := serviceData[13:]
+	
+	log.Printf("WARNING: Parsing encrypted data - needs decryption")
+	log.Printf("  Encrypted Nonce: %x", nonce)
+	log.Printf("  Encrypted Routing ID: %x", routingID)
+	log.Printf("  Encrypted Tunnel Service: %x", tunnelService)
+	log.Printf("  Encrypted Additional Data: %x", additionalData)
+	
+	// Map tunnel service identifier to URL (placeholder)
+	tunnelURL := s.getTunnelURL(tunnelService)
+	
+	// Generate tunnel ID
+	tunnelID := make([]byte, 16)
+	copy(tunnelID, nonce)
+	if len(additionalData) > 0 {
+		copy(tunnelID[8:], additionalData[:min(8, len(additionalData))])
 	}
 	
-	log.Printf("Service data insufficient for full caBLE v2 parsing: %d bytes (expected 20)", len(serviceData))
+	tunnelInfo := &TunnelInfo{
+		TunnelURL:      tunnelURL,
+		RoutingID:      routingID,
+		TunnelID:       tunnelID,
+		AdditionalData: additionalData,
+	}
+	
+	// Send tunnel info to channel
+	select {
+	case tunnelInfoChan <- tunnelInfo:
+		return true
+	default:
+		return false
+	}
+	
 	return false
 }
 
@@ -872,4 +699,12 @@ func must(action string, err error) {
 	if err != nil {
 		panic("failed to " + action + ": " + err.Error())
 	}
+}
+
+// min returns the minimum of two integers
+func min(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
 }
