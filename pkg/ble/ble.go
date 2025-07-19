@@ -162,11 +162,18 @@ func (s *Scanner) StartScanning(ctx context.Context) error {
 		for s.running {
 			select {
 			case <-ctx.Done():
+				log.Printf("Context cancelled, exiting scan loop")
 				return
 			default:
 				log.Println("Starting BLE scan cycle...")
 				
 				err := s.adapter.Scan(func(adapter *bluetooth.Adapter, result bluetooth.ScanResult) {
+					// Immediate context check at start of callback
+					select {
+					case <-ctx.Done():
+						return
+					default:
+					}
 					deviceAddr := result.Address.String()
 					localName := result.AdvertisementPayload.LocalName()
 					
@@ -174,6 +181,26 @@ func (s *Scanner) StartScanning(ctx context.Context) error {
 					log.Printf("BLE Device: %s (RSSI: %d dBm)", deviceAddr, result.RSSI)
 					if localName != "" {
 						log.Printf("  Local Name: %s", localName)
+					} else {
+						log.Printf("  Local Name: (not available)")
+					}
+					
+					// Special logging for iPad device
+					if deviceAddr == "394c3434-49ab-2b33-5bb4-228481792d55" || 
+					   deviceAddr == "394C3434-49AB-2B33-5BB4-228481792D55" {
+						log.Printf("  *** This is the known iPad device ***")
+						log.Printf("  *** iPad detected in regular scan - will check for caBLE data ***")
+						
+						// Force iPad processing
+						go func() {
+							log.Printf("Processing iPad device for caBLE data...")
+							// Try to process as potential tunnel advertisement
+							if s.processTunnelAdvertisement(result, make(chan *TunnelInfo, 1)) {
+								log.Printf("iPad caBLE processing successful!")
+							} else {
+								log.Printf("iPad caBLE processing - no caBLE data found (expected)")
+							}
+						}()
 					}
 					
 					// Log detailed device information to device-specific log file
@@ -236,10 +263,21 @@ func (s *Scanner) StartScanning(ctx context.Context) error {
 				
 				if err != nil {
 					log.Printf("BLE scan error: %v", err)
+					// Exit on error or context cancellation
+					select {
+					case <-ctx.Done():
+						return
+					default:
+					}
 				}
 				
-				// Wait before next scan cycle
-				time.Sleep(1 * time.Second)
+				// Wait before next scan cycle with context check
+				select {
+				case <-ctx.Done():
+					return
+				case <-time.After(1 * time.Second):
+					// Continue to next iteration
+				}
 			}
 		}
 	}()
@@ -532,28 +570,53 @@ func (s *Scanner) WaitForTunnelAdvertisement(ctx context.Context) (*TunnelInfo, 
 	// Channel to receive tunnel information
 	tunnelInfoChan := make(chan *TunnelInfo, 1)
 	scanErrChan := make(chan error, 1)
+	scanDoneChan := make(chan bool, 1)
 	
-	// Start scanning in a goroutine that respects context cancellation
+	// Start scanning with context timeout
 	go func() {
 		defer func() {
+			log.Printf("Stopping BLE scan...")
 			if err := s.adapter.StopScan(); err != nil {
 				log.Printf("Error stopping scan: %v", err)
 			}
+			scanDoneChan <- true
+		}()
+		
+		// Monitor context cancellation in a separate goroutine
+		go func() {
+			<-ctx.Done()
+			log.Printf("Context cancelled, forcing scan stop")
+			s.adapter.StopScan()
 		}()
 		
 		err := s.adapter.Scan(func(adapter *bluetooth.Adapter, result bluetooth.ScanResult) {
-			// Check if context is cancelled
+			// Check if context is cancelled immediately
 			select {
 			case <-ctx.Done():
+				log.Printf("Context cancelled in scan callback")
 				return
 			default:
 			}
 			
 			deviceID := result.Address.String()
 			rssi := result.RSSI
+			localName := result.AdvertisementPayload.LocalName()
 			
 			// Log device discovery
 			log.Printf("BLE Device found: %s (RSSI: %d dBm)", deviceID, rssi)
+			if localName != "" {
+				log.Printf("  Name: %s", localName)
+			}
+			
+			// Check for iPad device
+			isIPad := strings.Contains(strings.ToLower(localName), "ipad") || 
+				deviceID == "394c3434-49ab-2b33-5bb4-228481792d55" || 
+				deviceID == "394C3434-49AB-2B33-5BB4-228481792D55"
+				
+			if isIPad {
+				log.Printf("*** DETECTED iPAD DEVICE IN TUNNEL SCAN: %s ***", deviceID)
+				log.Printf("  Will attempt iPad-specific caBLE extraction")
+			}
 			
 			// Special check for device found by Python scanner
 			if deviceID == "121b296f-41b8-90a8-f92f-355b91b6aa55" || deviceID == "121B296F-41B8-90A8-F92F-355B91B6AA55" {
@@ -598,15 +661,26 @@ func (s *Scanner) WaitForTunnelAdvertisement(ctx context.Context) (*TunnelInfo, 
 		log.Printf("Successfully received tunnel info, stopping scan...")
 		return tunnelInfo, nil
 	case err := <-scanErrChan:
+		log.Printf("Scan error occurred, stopping scan...")
 		return nil, fmt.Errorf("failed to start BLE scan: %w", err)
 	case <-ctx.Done():
-		log.Printf("Context cancelled, stopping scan...")
+		log.Printf("Context timeout/cancellation, waiting for scan to stop...")
+		// Wait for scan to actually stop
+		select {
+		case <-scanDoneChan:
+			log.Printf("Scan stopped gracefully")
+		case <-time.After(2 * time.Second):
+			log.Printf("Scan stop timeout, forcing exit")
+		}
 		return nil, ctx.Err()
 	}
 }
 
 // processTunnelAdvertisement processes BLE advertisement data for tunnel service information
 func (s *Scanner) processTunnelAdvertisement(result bluetooth.ScanResult, tunnelInfoChan chan *TunnelInfo) bool {
+	deviceAddr := result.Address.String()
+	localName := result.AdvertisementPayload.LocalName()
+	
 	// Parse UUIDs from advertisement payload using existing method
 	fidoServiceUUID, _ := bluetooth.ParseUUID(FIDOServiceUUID)
 	cableServiceUUID, _ := bluetooth.ParseUUID(CableServiceUUID)
@@ -615,7 +689,41 @@ func (s *Scanner) processTunnelAdvertisement(result bluetooth.ScanResult, tunnel
 	hasFIDOService := result.AdvertisementPayload.HasServiceUUID(fidoServiceUUID)
 	hasCableService := result.AdvertisementPayload.HasServiceUUID(cableServiceUUID)
 	
-	if !hasFIDOService && !hasCableService {
+	// Special handling for iPad devices - check Apple Manufacturer Data
+	// iPad detection: either by name or known device ID
+	isIPad := strings.Contains(strings.ToLower(localName), "ipad") || 
+		deviceAddr == "394c3434-49ab-2b33-5bb4-228481792d55" || 
+		deviceAddr == "394C3434-49AB-2B33-5BB4-228481792D55"
+	
+	var appleManufacturerData []byte
+	
+	if isIPad {
+		log.Printf("*** DETECTED iPAD DEVICE: %s ***", deviceAddr)
+		log.Printf("  Detection method: %s", func() string {
+			if strings.Contains(strings.ToLower(localName), "ipad") {
+				return "Local Name"
+			}
+			return "Known Device ID"
+		}())
+		
+		// TODO: Extract manufacturer data when TinyGo Bluetooth supports it
+		// For now, we'll check service UUIDs as fallback
+		log.Printf("  Device Name: %s", localName)
+		log.Printf("  Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)")
+		log.Printf("  Checking for standard service UUIDs as fallback...")
+		
+		// Check if there's any potential caBLE data in manufacturer data
+		// This would need TinyGo Bluetooth manufacturer data support
+		appleManufacturerData = s.extractAppleManufacturerData(result)
+		if len(appleManufacturerData) > 0 {
+			log.Printf("  Found Apple Manufacturer Data: %x", appleManufacturerData)
+			if s.tryAppleManufacturerDataDecryption(appleManufacturerData, tunnelInfoChan) {
+				return true
+			}
+		}
+	}
+	
+	if !hasFIDOService && !hasCableService && !isIPad {
 		return false
 	}
 	
@@ -650,81 +758,25 @@ func (s *Scanner) processTunnelAdvertisement(result bluetooth.ScanResult, tunnel
 		}
 	}
 	
-	if serviceData == nil || len(serviceData) < 20 {
+	// For standard devices (non-iPad), require service data
+	if !isIPad && (serviceData == nil || len(serviceData) < 20) {
 		log.Printf("Service data insufficient for caBLE v2 (got %d bytes, need 20)", len(serviceData))
+		return false
+	}
+	
+	// For iPad devices, we've already tried Apple Manufacturer Data above
+	// If we reach here with an iPad but no service data, that's expected
+	if isIPad && (serviceData == nil || len(serviceData) < 20) {
+		log.Printf("iPad device detected without standard service data - this is expected")
+		log.Printf("iPad uses Apple Manufacturer Data embedding (already attempted above)")
 		return false
 	}
 	
 	log.Printf("Service data length: %d bytes", len(serviceData))
 	log.Printf("Service data (encrypted): %x", serviceData)
 	
-	// Decrypt caBLE v2 service data using QR secret
-	decryptor := NewCableV2Decryptor(s.qrSecret)
-	decryptedData, err := decryptor.DecryptServiceData(serviceData)
-	
-	var nonce, routingID, tunnelService, additionalData []byte
-	var tunnelURL string
-	
-	if err != nil {
-		log.Printf("Failed to decrypt caBLE v2 service data: %v", err)
-		log.Printf("Falling back to parsing encrypted data for demonstration")
-		
-		// Fallback: parse encrypted data as-is
-		nonce = serviceData[0:8]
-		routingID = serviceData[8:11]
-		tunnelService = serviceData[11:13]
-		additionalData = serviceData[13:]
-		
-		log.Printf("WARNING: Using encrypted data (fallback)")
-		log.Printf("  Encrypted Nonce: %x", nonce)
-		log.Printf("  Encrypted Routing ID: %x", routingID)
-		log.Printf("  Encrypted Tunnel Service: %x", tunnelService)
-		log.Printf("  Encrypted Additional Data: %x", additionalData)
-	} else {
-		log.Printf("Successfully decrypted caBLE v2 service data: %x", decryptedData)
-		
-		// Parse decrypted data according to caBLE v2 specification
-		var parseErr error
-		nonce, routingID, tunnelService, additionalData, parseErr = ParseDecryptedServiceData(decryptedData)
-		if parseErr != nil {
-			log.Printf("Failed to parse decrypted service data: %v", parseErr)
-			return false
-		}
-		
-		log.Printf("Decrypted caBLE v2 advertisement:")
-		log.Printf("  Nonce: %x", nonce)
-		log.Printf("  Routing ID: %x", routingID)
-		log.Printf("  Tunnel Service: %x", tunnelService)
-		log.Printf("  Additional Data: %x", additionalData)
-	}
-	
-	// Map tunnel service identifier to URL
-	tunnelURL = s.getTunnelURL(tunnelService)
-	
-	// Extract tunnel service domain from 2-byte identifier
-	var encodedTunnelDomain uint16
-	if len(tunnelService) >= 2 {
-		encodedTunnelDomain = uint16(tunnelService[0]) | (uint16(tunnelService[1]) << 8)
-	}
-	
-	tunnelInfo := &TunnelInfo{
-		TunnelURL:           tunnelURL,
-		ConnectionNonce:     nonce,                    // 10-byte connection nonce
-		RoutingID:           routingID,                // 3-byte routing ID  
-		TunnelServiceID:     tunnelService,            // 2-byte tunnel service identifier
-		EncodedTunnelDomain: encodedTunnelDomain,      // uint16 tunnel domain
-		AdditionalData:      additionalData,           // Additional data (if any)
-	}
-	
-	// Send tunnel info to channel
-	select {
-	case tunnelInfoChan <- tunnelInfo:
-		return true
-	default:
-		return false
-	}
-	
-	return false
+	// Try to decrypt and process the service data
+	return s.tryDecryptCableData(serviceData, tunnelInfoChan, "Standard Service Data")
 }
 
 // getTunnelURL maps tunnel service identifier to URL
@@ -743,6 +795,138 @@ func (s *Scanner) getTunnelURL(tunnelService []byte) string {
 		}
 	}
 	return "cable.ua5v.com"
+}
+
+// extractAppleManufacturerData attempts to extract Apple manufacturer data from BLE advertisement
+func (s *Scanner) extractAppleManufacturerData(result bluetooth.ScanResult) []byte {
+	// TODO: This requires TinyGo Bluetooth library support for manufacturer data
+	// The current TinyGo Bluetooth library (v0.12.0) has limited manufacturer data access
+	// We would need to use the raw advertisement data parsing or wait for library updates
+	
+	// For now, return empty slice as placeholder
+	// In a real implementation, we would parse the raw advertisement payload
+	// to extract manufacturer data with Company ID 76 (Apple)
+	
+	log.Printf("  Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented")
+	log.Printf("  Need to parse raw advertisement payload for Company ID 76 (Apple)")
+	
+	return []byte{}
+}
+
+// tryAppleManufacturerDataDecryption attempts to decrypt caBLE data from Apple manufacturer data
+func (s *Scanner) tryAppleManufacturerDataDecryption(manufacturerData []byte, tunnelInfoChan chan *TunnelInfo) bool {
+	log.Printf("Attempting to decrypt Apple Manufacturer Data as caBLE v2...")
+	
+	// Apple Manufacturer Data format for caBLE (based on research):
+	// [2 bytes: Apple Company ID 0x004C] + [variable: Apple-specific data]
+	// The caBLE data is embedded within the Apple-specific portion
+	
+	if len(manufacturerData) < 9 {
+		log.Printf("  Apple Manufacturer Data too short: %d bytes (minimum 9 for caBLE)", len(manufacturerData))
+		return false
+	}
+	
+	// Skip first 2 bytes (likely Apple type/subtype flags)
+	// Based on research logs, the pattern is: 10054b18c52d68 or 10054718c52d68
+	// Where the changing part (4b->47) might contain caBLE information
+	cableCandidate := manufacturerData[2:] // Skip type flags
+	
+	log.Printf("  Apple caBLE candidate data: %x", cableCandidate)
+	
+	// Try to decrypt as caBLE v2 if we have enough data
+	if len(cableCandidate) >= 20 {
+		return s.tryDecryptCableData(cableCandidate, tunnelInfoChan, "Apple Manufacturer Data")
+	}
+	
+	// For shorter Apple data, try different extraction strategies
+	if len(cableCandidate) >= 7 {
+		log.Printf("  Attempting iPad-specific caBLE extraction from %d bytes", len(cableCandidate))
+		
+		// Extract what we can and pad/extend as needed for testing
+		// This is experimental - real iPad implementation may vary
+		
+		// Try to extract nonce-like data from changing portion
+		var paddedData [20]byte
+		copy(paddedData[:], cableCandidate)
+		
+		// Fill remaining with pattern or zeros
+		for i := len(cableCandidate); i < 20; i++ {
+			paddedData[i] = 0x00
+		}
+		
+		log.Printf("  Padded candidate data: %x", paddedData[:])
+		return s.tryDecryptCableData(paddedData[:], tunnelInfoChan, "iPad Apple Data (padded)")
+	}
+	
+	log.Printf("  Apple Manufacturer Data insufficient for caBLE extraction")
+	return false
+}
+
+// tryDecryptCableData attempts to decrypt caBLE v2 data from any source
+func (s *Scanner) tryDecryptCableData(data []byte, tunnelInfoChan chan *TunnelInfo, source string) bool {
+	log.Printf("Attempting caBLE v2 decryption from %s...", source)
+	
+	// Decrypt caBLE v2 data using QR secret
+	decryptor := NewCableV2Decryptor(s.qrSecret)
+	decryptedData, err := decryptor.DecryptServiceData(data)
+	
+	var nonce, routingID, tunnelService, additionalData []byte
+	var tunnelURL string
+	
+	if err != nil {
+		log.Printf("Failed to decrypt %s as caBLE v2: %v", source, err)
+		
+		// For iPad, we might need different extraction strategy
+		if strings.Contains(source, "iPad") || strings.Contains(source, "Apple") {
+			log.Printf("  iPad decryption failed - this is expected as iPad uses different embedding")
+			log.Printf("  The changing bytes in Apple data might indicate caBLE activity")
+			log.Printf("  Need to research iPad-specific caBLE data format")
+		}
+		return false
+	}
+	
+	log.Printf("Successfully decrypted %s: %x", source, decryptedData)
+	
+	// Parse decrypted data according to caBLE v2 specification
+	var parseErr error
+	nonce, routingID, tunnelService, additionalData, parseErr = ParseDecryptedServiceData(decryptedData)
+	if parseErr != nil {
+		log.Printf("Failed to parse decrypted data from %s: %v", source, parseErr)
+		return false
+	}
+	
+	log.Printf("Decrypted caBLE v2 from %s:", source)
+	log.Printf("  Nonce: %x", nonce)
+	log.Printf("  Routing ID: %x", routingID)
+	log.Printf("  Tunnel Service: %x", tunnelService)
+	log.Printf("  Additional Data: %x", additionalData)
+	
+	// Map tunnel service identifier to URL
+	tunnelURL = s.getTunnelURL(tunnelService)
+	
+	// Extract tunnel service domain from 2-byte identifier
+	var encodedTunnelDomain uint16
+	if len(tunnelService) >= 2 {
+		encodedTunnelDomain = uint16(tunnelService[0]) | (uint16(tunnelService[1]) << 8)
+	}
+	
+	tunnelInfo := &TunnelInfo{
+		TunnelURL:           tunnelURL,
+		ConnectionNonce:     nonce,
+		RoutingID:           routingID,
+		TunnelServiceID:     tunnelService,
+		EncodedTunnelDomain: encodedTunnelDomain,
+		AdditionalData:      additionalData,
+	}
+	
+	// Send tunnel info to channel
+	select {
+	case tunnelInfoChan <- tunnelInfo:
+		log.Printf("Successfully extracted tunnel info from %s", source)
+		return true
+	default:
+		return false
+	}
 }
 
 // Helper function from TinyGo Bluetooth examples

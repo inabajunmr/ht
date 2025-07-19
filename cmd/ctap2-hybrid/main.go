@@ -4,9 +4,11 @@ import (
 	"context"
 	"flag"
 	"fmt"
+	"io"
 	"log"
 	"os"
 	"os/signal"
+	"path/filepath"
 	"syscall"
 	"time"
 
@@ -24,16 +26,30 @@ func main() {
 	)
 	flag.Parse()
 
+	// Setup log file for non-QR output
+	if err := setupLogFile(); err != nil {
+		fmt.Fprintf(os.Stderr, "Failed to setup log file: %v\n", err)
+		os.Exit(1)
+	}
+
 	ctx, cancel := context.WithTimeout(context.Background(), *timeout)
 	defer cancel()
 
-	// Handle interrupt signals
+	// Handle interrupt signals with proper shutdown
 	sigCh := make(chan os.Signal, 1)
 	signal.Notify(sigCh, syscall.SIGINT, syscall.SIGTERM)
 
 	go func() {
-		<-sigCh
+		sig := <-sigCh
+		log.Printf("Received signal %v, initiating shutdown...", sig)
 		cancel()
+		
+		// Give some time for graceful shutdown, then force exit
+		go func() {
+			time.Sleep(3 * time.Second)
+			log.Printf("Force exit after 3 seconds")
+			os.Exit(1)
+		}()
 	}()
 
 	// Initialize CTAP2 hybrid transport
@@ -43,9 +59,30 @@ func main() {
 	}
 
 	// Start the hybrid transport process
+	log.Printf("Starting hybrid transport with timeout: %v", *timeout)
+	
+	// Ensure log file is properly closed on exit
+	defer func() {
+		if logFileHandle != nil {
+			log.Printf("=== CTAP2 Hybrid Transport Log Ended ===")
+			log.Printf("Timestamp: %s", time.Now().Format(time.RFC3339))
+			logFileHandle.Close()
+		}
+	}()
+	
 	if err := runHybridTransport(ctx, transport); err != nil {
-		log.Fatalf("Error: %v", err)
+		if err == context.DeadlineExceeded {
+			log.Printf("Operation timed out after %v", *timeout)
+			return
+		} else if err == context.Canceled {
+			log.Printf("Operation cancelled by user")
+			return
+		} else {
+			log.Printf("Error: %v", err)
+			os.Exit(1)
+		}
 	}
+	log.Printf("Hybrid transport completed successfully")
 }
 
 func runHybridTransport(ctx context.Context, transport *ctap2.HybridTransport) error {
@@ -66,21 +103,35 @@ func runHybridTransport(ctx context.Context, transport *ctap2.HybridTransport) e
 	}
 
 	// Step 3: Wait for BLE advertisement from smartphone
-	fmt.Println("Waiting for smartphone to advertise after QR scan...")
+	log.Println("Waiting for smartphone to advertise after QR scan...")
+	
+	// Check if context is already cancelled before starting scan
+	select {
+	case <-ctx.Done():
+		return ctx.Err()
+	default:
+	}
 	
 	// Wait for BLE advertisement with tunnel service information
 	tunnelInfo, err := bleScanner.WaitForTunnelAdvertisement(ctx)
 	if err != nil {
+		if err == context.DeadlineExceeded {
+			log.Printf("Timeout waiting for BLE advertisement")
+			return err
+		} else if err == context.Canceled {
+			log.Printf("BLE scan cancelled")
+			return err
+		}
 		return fmt.Errorf("failed to receive tunnel advertisement: %w", err)
 	}
 	
-	fmt.Printf("Received tunnel service information:\n")
-	fmt.Printf("  Tunnel URL: %s\n", tunnelInfo.TunnelURL)
-	fmt.Printf("  Connection Nonce: %x\n", tunnelInfo.ConnectionNonce)
-	fmt.Printf("  Routing ID: %x\n", tunnelInfo.RoutingID)
-	fmt.Printf("  Tunnel Service ID: %x\n", tunnelInfo.TunnelServiceID)
-	fmt.Printf("  Encoded Tunnel Domain: %d\n", tunnelInfo.EncodedTunnelDomain)
-	fmt.Printf("  Additional Data: %x\n", tunnelInfo.AdditionalData)
+	log.Printf("Received tunnel service information:")
+	log.Printf("  Tunnel URL: %s", tunnelInfo.TunnelURL)
+	log.Printf("  Connection Nonce: %x", tunnelInfo.ConnectionNonce)
+	log.Printf("  Routing ID: %x", tunnelInfo.RoutingID)
+	log.Printf("  Tunnel Service ID: %x", tunnelInfo.TunnelServiceID)
+	log.Printf("  Encoded Tunnel Domain: %d", tunnelInfo.EncodedTunnelDomain)
+	log.Printf("  Additional Data: %x", tunnelInfo.AdditionalData)
 	
 	// Step 4: Setup tunnel service with information from BLE advertisement
 	tunnelClient, err := tunnel.NewClient(tunnelInfo.TunnelURL, qrData.PrivateKey, qrData.PublicKey, qrData.QRSecret)
@@ -91,8 +142,8 @@ func runHybridTransport(ctx context.Context, transport *ctap2.HybridTransport) e
 	// Update tunnel client with advertisement information
 	tunnelClient.SetTunnelInfo(tunnelInfo.RoutingID, tunnelInfo.ConnectionNonce)
 	
-	fmt.Println("Tunnel service information received, but not connecting (as requested)")
-	fmt.Println("Implementation complete - ready for actual tunnel connection")
+	log.Println("Tunnel service information received, but not connecting (as requested)")
+	log.Println("Implementation complete - ready for actual tunnel connection")
 	
 	// TODO: Implement actual tunnel connection and CTAP2 message handling
 	// This would involve:
@@ -101,5 +152,41 @@ func runHybridTransport(ctx context.Context, transport *ctap2.HybridTransport) e
 	// 3. attestationData, err := handler.HandleAuthentication(ctx)
 	// 4. attestation.SaveToFile(attestationData, transport.OutputFile)
 	
+	return nil
+}
+
+// Global log file handle for proper cleanup
+var logFileHandle *os.File
+
+// setupLogFile creates log directory and redirects log output to log/latest.log
+func setupLogFile() error {
+	// Create log directory if it doesn't exist
+	logDir := "log"
+	if err := os.MkdirAll(logDir, 0755); err != nil {
+		return fmt.Errorf("failed to create log directory: %w", err)
+	}
+
+	// Create/truncate log file
+	logFile := filepath.Join(logDir, "latest.log")
+	file, err := os.OpenFile(logFile, os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0644)
+	if err != nil {
+		return fmt.Errorf("failed to create log file: %w", err)
+	}
+
+	// Store file handle globally for cleanup
+	logFileHandle = file
+
+	// Create multi-writer to write to both file and stdout for QR code
+	multiWriter := io.MultiWriter(file, os.Stdout)
+	log.SetOutput(multiWriter)
+
+	// Write initial log header
+	log.Printf("=== CTAP2 Hybrid Transport Log Started ===")
+	log.Printf("Log file: %s", logFile)
+	log.Printf("Timestamp: %s", time.Now().Format(time.RFC3339))
+	log.Printf("Timeout: %v", time.Duration(0)) // Will be updated in main
+	log.Printf("============================================")
+
+	fmt.Printf("Log file created: %s\n", logFile)
 	return nil
 }

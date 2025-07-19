@@ -1,0 +1,1817 @@
+2025/07/20 01:30:30 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -51 dBm)
+2025/07/20 01:30:30 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:30   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:30 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:30   Detection method: Known Device ID
+2025/07/20 01:30:30   Device Name: 
+2025/07/20 01:30:30   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:30   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:30   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:30   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:30 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:30 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:30 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -51 dBm)
+2025/07/20 01:30:30 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:30   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:30 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:30   Detection method: Known Device ID
+2025/07/20 01:30:30   Device Name: 
+2025/07/20 01:30:30   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:30   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:30   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:30   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:30 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:30 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:30 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -40 dBm)
+2025/07/20 01:30:30 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:30   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:30 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:30   Detection method: Known Device ID
+2025/07/20 01:30:30   Device Name: 
+2025/07/20 01:30:30   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:30   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:30   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:30   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:30 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:30 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:30 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -40 dBm)
+2025/07/20 01:30:30 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:31 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -41 dBm)
+2025/07/20 01:30:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:31 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -41 dBm)
+2025/07/20 01:30:31 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:31   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:31 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:31   Detection method: Known Device ID
+2025/07/20 01:30:31   Device Name: 
+2025/07/20 01:30:31   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:31   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:31   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:31   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:31 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:31 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:31 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -39 dBm)
+2025/07/20 01:30:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:31 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -47 dBm)
+2025/07/20 01:30:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:31 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -47 dBm)
+2025/07/20 01:30:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:31 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -48 dBm)
+2025/07/20 01:30:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:31 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -46 dBm)
+2025/07/20 01:30:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:31 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -53 dBm)
+2025/07/20 01:30:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:31 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -56 dBm)
+2025/07/20 01:30:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:31 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -61 dBm)
+2025/07/20 01:30:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:31 BLE Device found: 19aee4ee-891a-c9e3-f10f-1fa4021d96c0 (RSSI: -77 dBm)
+2025/07/20 01:30:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:31 BLE Device found: 19aee4ee-891a-c9e3-f10f-1fa4021d96c0 (RSSI: -77 dBm)
+2025/07/20 01:30:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:31 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -47 dBm)
+2025/07/20 01:30:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:31 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -47 dBm)
+2025/07/20 01:30:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:31 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -61 dBm)
+2025/07/20 01:30:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:31 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -71 dBm)
+2025/07/20 01:30:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:31 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -53 dBm)
+2025/07/20 01:30:31 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:31   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:31 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:31   Detection method: Known Device ID
+2025/07/20 01:30:31   Device Name: 
+2025/07/20 01:30:31   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:31   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:31   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:31   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:31 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:31 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:31 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -75 dBm)
+2025/07/20 01:30:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:31 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -66 dBm)
+2025/07/20 01:30:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:31 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -54 dBm)
+2025/07/20 01:30:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:31 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -54 dBm)
+2025/07/20 01:30:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:31 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -67 dBm)
+2025/07/20 01:30:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:31 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -56 dBm)
+2025/07/20 01:30:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:32 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -62 dBm)
+2025/07/20 01:30:32 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:32 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -56 dBm)
+2025/07/20 01:30:32 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:32 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -51 dBm)
+2025/07/20 01:30:32 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:32 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -50 dBm)
+2025/07/20 01:30:32 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:32 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -71 dBm)
+2025/07/20 01:30:32 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:32 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -59 dBm)
+2025/07/20 01:30:32 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:33 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -62 dBm)
+2025/07/20 01:30:33 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:33 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -57 dBm)
+2025/07/20 01:30:33 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:33 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -66 dBm)
+2025/07/20 01:30:33 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:33 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -66 dBm)
+2025/07/20 01:30:33 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:33   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:33 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:33   Detection method: Known Device ID
+2025/07/20 01:30:33   Device Name: 
+2025/07/20 01:30:33   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:33   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:33   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:33   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:33 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:33 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:33 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -66 dBm)
+2025/07/20 01:30:33 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:33   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:33 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:33   Detection method: Known Device ID
+2025/07/20 01:30:33   Device Name: 
+2025/07/20 01:30:33   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:33   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:33   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:33   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:33 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:33 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:34 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -57 dBm)
+2025/07/20 01:30:34 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:34 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -63 dBm)
+2025/07/20 01:30:34 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:34 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -57 dBm)
+2025/07/20 01:30:34 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:34 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -65 dBm)
+2025/07/20 01:30:34 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:35 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -58 dBm)
+2025/07/20 01:30:35 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:35 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -56 dBm)
+2025/07/20 01:30:35 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:35 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -51 dBm)
+2025/07/20 01:30:35 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:35 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -51 dBm)
+2025/07/20 01:30:35 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:35 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -66 dBm)
+2025/07/20 01:30:35 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:36 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -58 dBm)
+2025/07/20 01:30:36 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:36 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -66 dBm)
+2025/07/20 01:30:36 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:36 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -52 dBm)
+2025/07/20 01:30:36 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:36 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -58 dBm)
+2025/07/20 01:30:36 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:37 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -51 dBm)
+2025/07/20 01:30:37 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:37 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -51 dBm)
+2025/07/20 01:30:37 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:37 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -65 dBm)
+2025/07/20 01:30:37 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:37 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -65 dBm)
+2025/07/20 01:30:37 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:37   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:37 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:37   Detection method: Known Device ID
+2025/07/20 01:30:37   Device Name: 
+2025/07/20 01:30:37   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:37   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:37   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:37   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:37 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:37 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:37 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -65 dBm)
+2025/07/20 01:30:37 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:37   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:37 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:37   Detection method: Known Device ID
+2025/07/20 01:30:37   Device Name: 
+2025/07/20 01:30:37   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:37   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:37   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:37   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:37 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:37 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:37 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -60 dBm)
+2025/07/20 01:30:37 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:37   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:37 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:37   Detection method: Known Device ID
+2025/07/20 01:30:37   Device Name: 
+2025/07/20 01:30:37   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:37   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:37   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:37   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:37 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:37 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:37 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -60 dBm)
+2025/07/20 01:30:37 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:37   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:37 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:37   Detection method: Known Device ID
+2025/07/20 01:30:37   Device Name: 
+2025/07/20 01:30:37   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:37   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:37   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:37   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:37 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:37 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:37 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -67 dBm)
+2025/07/20 01:30:37 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:38 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -61 dBm)
+2025/07/20 01:30:38 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:38 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -49 dBm)
+2025/07/20 01:30:38 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:38 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -49 dBm)
+2025/07/20 01:30:38 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:38 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -61 dBm)
+2025/07/20 01:30:38 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:38 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -63 dBm)
+2025/07/20 01:30:38 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:39 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -59 dBm)
+2025/07/20 01:30:39 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:39 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -57 dBm)
+2025/07/20 01:30:39 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:39 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -58 dBm)
+2025/07/20 01:30:39 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:39   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:39 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:39   Detection method: Known Device ID
+2025/07/20 01:30:39   Device Name: 
+2025/07/20 01:30:39   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:39   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:39   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:39   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:39 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:39 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:39 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -57 dBm)
+2025/07/20 01:30:39 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:39   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:39 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:39   Detection method: Known Device ID
+2025/07/20 01:30:39   Device Name: 
+2025/07/20 01:30:39   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:39   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:39   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:39   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:39 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:39 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:39 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -68 dBm)
+2025/07/20 01:30:39 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:40 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -58 dBm)
+2025/07/20 01:30:40 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:40   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:40 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:40   Detection method: Known Device ID
+2025/07/20 01:30:40   Device Name: 
+2025/07/20 01:30:40   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:40   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:40   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:40   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:40 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:40 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:40 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -59 dBm)
+2025/07/20 01:30:40 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:40 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -45 dBm)
+2025/07/20 01:30:40 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:40 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -45 dBm)
+2025/07/20 01:30:40 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:40 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -64 dBm)
+2025/07/20 01:30:40 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:40 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -52 dBm)
+2025/07/20 01:30:40 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:40 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -52 dBm)
+2025/07/20 01:30:40 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:41 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -52 dBm)
+2025/07/20 01:30:41 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:41 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -53 dBm)
+2025/07/20 01:30:41 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:41 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -52 dBm)
+2025/07/20 01:30:41 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:41 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -61 dBm)
+2025/07/20 01:30:41 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:41 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -52 dBm)
+2025/07/20 01:30:41 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:41 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -51 dBm)
+2025/07/20 01:30:41 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:41 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -51 dBm)
+2025/07/20 01:30:41 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:42 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -55 dBm)
+2025/07/20 01:30:42 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:42 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -44 dBm)
+2025/07/20 01:30:42 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:42 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -44 dBm)
+2025/07/20 01:30:42 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:42 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -79 dBm)
+2025/07/20 01:30:42 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:42 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -77 dBm)
+2025/07/20 01:30:42 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:43 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -58 dBm)
+2025/07/20 01:30:43 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:43 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -76 dBm)
+2025/07/20 01:30:43 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:43 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -70 dBm)
+2025/07/20 01:30:43 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:43 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -51 dBm)
+2025/07/20 01:30:43 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:43 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -51 dBm)
+2025/07/20 01:30:43 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:44 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -61 dBm)
+2025/07/20 01:30:44 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:44 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -76 dBm)
+2025/07/20 01:30:44 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:44 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -76 dBm)
+2025/07/20 01:30:44 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:44   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:44 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:44   Detection method: Known Device ID
+2025/07/20 01:30:44   Device Name: 
+2025/07/20 01:30:44   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:44   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:44   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:44   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:44 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:44 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:44 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -76 dBm)
+2025/07/20 01:30:44 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:44   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:44 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:44   Detection method: Known Device ID
+2025/07/20 01:30:44   Device Name: 
+2025/07/20 01:30:44   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:44   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:44   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:44   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:44 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:44 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:44 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -63 dBm)
+2025/07/20 01:30:44 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:44 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -45 dBm)
+2025/07/20 01:30:44 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:44 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -45 dBm)
+2025/07/20 01:30:44 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:44 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -62 dBm)
+2025/07/20 01:30:44 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:45 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -62 dBm)
+2025/07/20 01:30:45 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:45 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -62 dBm)
+2025/07/20 01:30:45 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:46 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -67 dBm)
+2025/07/20 01:30:46 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:46 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -61 dBm)
+2025/07/20 01:30:46 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:46 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -51 dBm)
+2025/07/20 01:30:46 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:46 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -51 dBm)
+2025/07/20 01:30:46 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:46 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -61 dBm)
+2025/07/20 01:30:46 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:46   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:46 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:46   Detection method: Known Device ID
+2025/07/20 01:30:46   Device Name: 
+2025/07/20 01:30:46   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:46   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:46   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:46   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:46 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:46 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:46 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -61 dBm)
+2025/07/20 01:30:46 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:46   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:46 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:46   Detection method: Known Device ID
+2025/07/20 01:30:46   Device Name: 
+2025/07/20 01:30:46   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:46   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:46   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:46   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:46 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:46 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:46 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -62 dBm)
+2025/07/20 01:30:46 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:46   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:46 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:46   Detection method: Known Device ID
+2025/07/20 01:30:46   Device Name: 
+2025/07/20 01:30:46   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:46   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:46   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:46   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:46 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:46 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:46 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -62 dBm)
+2025/07/20 01:30:46 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:46   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:46 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:46   Detection method: Known Device ID
+2025/07/20 01:30:46   Device Name: 
+2025/07/20 01:30:46   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:46   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:46   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:46   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:46 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:46 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:46 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -61 dBm)
+2025/07/20 01:30:46 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:47 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -62 dBm)
+2025/07/20 01:30:47 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:47 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -70 dBm)
+2025/07/20 01:30:47 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:47 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -73 dBm)
+2025/07/20 01:30:47 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:47   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:47 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:47   Detection method: Known Device ID
+2025/07/20 01:30:47   Device Name: 
+2025/07/20 01:30:47   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:47   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:47   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:47   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:47 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:47 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:47 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -72 dBm)
+2025/07/20 01:30:47 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:47   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:47 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:47   Detection method: Known Device ID
+2025/07/20 01:30:47   Device Name: 
+2025/07/20 01:30:47   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:47   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:47   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:47   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:47 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:47 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:47 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -47 dBm)
+2025/07/20 01:30:47 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:47 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -47 dBm)
+2025/07/20 01:30:47 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:47 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -59 dBm)
+2025/07/20 01:30:47 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:47   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:47 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:47   Detection method: Known Device ID
+2025/07/20 01:30:47   Device Name: 
+2025/07/20 01:30:47   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:47   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:47   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:47   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:47 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:47 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:47 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -59 dBm)
+2025/07/20 01:30:47 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:47   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:47 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:47   Detection method: Known Device ID
+2025/07/20 01:30:47   Device Name: 
+2025/07/20 01:30:47   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:47   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:47   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:47   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:47 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:47 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:47 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -59 dBm)
+2025/07/20 01:30:47 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:48 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -61 dBm)
+2025/07/20 01:30:48 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:48   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:48 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:48   Detection method: Known Device ID
+2025/07/20 01:30:48   Device Name: 
+2025/07/20 01:30:48   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:48   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:48   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:48   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:48 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:48 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:48 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -61 dBm)
+2025/07/20 01:30:48 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:48 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -53 dBm)
+2025/07/20 01:30:48 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:48 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -53 dBm)
+2025/07/20 01:30:48 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:48 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -61 dBm)
+2025/07/20 01:30:48 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:48 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -66 dBm)
+2025/07/20 01:30:48 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:48 BLE Device found: 19aee4ee-891a-c9e3-f10f-1fa4021d96c0 (RSSI: -75 dBm)
+2025/07/20 01:30:48 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:48 BLE Device found: 19aee4ee-891a-c9e3-f10f-1fa4021d96c0 (RSSI: -75 dBm)
+2025/07/20 01:30:48 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:48 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -61 dBm)
+2025/07/20 01:30:48 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:49 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -51 dBm)
+2025/07/20 01:30:49 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:49 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -51 dBm)
+2025/07/20 01:30:49 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:49 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -61 dBm)
+2025/07/20 01:30:49 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:49 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -46 dBm)
+2025/07/20 01:30:49 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:49 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -46 dBm)
+2025/07/20 01:30:49 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:49 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -60 dBm)
+2025/07/20 01:30:49 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:50 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -60 dBm)
+2025/07/20 01:30:50 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:50 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -46 dBm)
+2025/07/20 01:30:50 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:50 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -46 dBm)
+2025/07/20 01:30:50 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:50 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -69 dBm)
+2025/07/20 01:30:50 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:50 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -53 dBm)
+2025/07/20 01:30:50 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:50 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -53 dBm)
+2025/07/20 01:30:50 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:50 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -59 dBm)
+2025/07/20 01:30:50 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:51 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -58 dBm)
+2025/07/20 01:30:51 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:51 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -71 dBm)
+2025/07/20 01:30:51 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:51 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -60 dBm)
+2025/07/20 01:30:51 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:51 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -52 dBm)
+2025/07/20 01:30:51 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:51 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -52 dBm)
+2025/07/20 01:30:51 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:51 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -63 dBm)
+2025/07/20 01:30:51 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:52 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -52 dBm)
+2025/07/20 01:30:52 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:52 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -52 dBm)
+2025/07/20 01:30:52 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:52 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -65 dBm)
+2025/07/20 01:30:52 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:52 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -68 dBm)
+2025/07/20 01:30:52 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:52 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -51 dBm)
+2025/07/20 01:30:52 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:52 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -51 dBm)
+2025/07/20 01:30:52 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:53 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -61 dBm)
+2025/07/20 01:30:53 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:53 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -64 dBm)
+2025/07/20 01:30:53 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:54 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -65 dBm)
+2025/07/20 01:30:54 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:54 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -61 dBm)
+2025/07/20 01:30:54 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:54 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -53 dBm)
+2025/07/20 01:30:54 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:54 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -53 dBm)
+2025/07/20 01:30:54 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:54 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -61 dBm)
+2025/07/20 01:30:54 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:54   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:54 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:54   Detection method: Known Device ID
+2025/07/20 01:30:54   Device Name: 
+2025/07/20 01:30:54   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:54   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:54   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:54   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:54 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:54 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:54 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -61 dBm)
+2025/07/20 01:30:54 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:54   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:54 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:54   Detection method: Known Device ID
+2025/07/20 01:30:54   Device Name: 
+2025/07/20 01:30:54   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:54   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:54   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:54   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:54 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:54 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:54 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -52 dBm)
+2025/07/20 01:30:54 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:54 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -72 dBm)
+2025/07/20 01:30:54 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:55 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -61 dBm)
+2025/07/20 01:30:55 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:55 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -61 dBm)
+2025/07/20 01:30:55 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:55 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -53 dBm)
+2025/07/20 01:30:55 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:55 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -53 dBm)
+2025/07/20 01:30:55 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:55 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -62 dBm)
+2025/07/20 01:30:55 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:56 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -54 dBm)
+2025/07/20 01:30:56 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:56 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -54 dBm)
+2025/07/20 01:30:56 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:56 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -62 dBm)
+2025/07/20 01:30:56 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:56 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -52 dBm)
+2025/07/20 01:30:56 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:56 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -52 dBm)
+2025/07/20 01:30:56 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:56 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -65 dBm)
+2025/07/20 01:30:56 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:56 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -73 dBm)
+2025/07/20 01:30:56 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:56   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:56 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:56   Detection method: Known Device ID
+2025/07/20 01:30:56   Device Name: 
+2025/07/20 01:30:56   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:56   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:56   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:56   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:56 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:56 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:56 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -73 dBm)
+2025/07/20 01:30:56 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:57 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -61 dBm)
+2025/07/20 01:30:57 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:30:57 Service data length: 20 bytes
+2025/07/20 01:30:57 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:30:57 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:30:57 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:30:57 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:30:57 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:30:57 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:30:57 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:30:57 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:30:57 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:30:57 HMAC verification failed
+2025/07/20 01:30:57 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:30:57 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -65 dBm)
+2025/07/20 01:30:57 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:30:57 Service data length: 20 bytes
+2025/07/20 01:30:57 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:30:57 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:30:57 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:30:57 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:30:57 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:30:57 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:30:57 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:30:57 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:30:57 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:30:57 HMAC verification failed
+2025/07/20 01:30:57 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:30:57 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -76 dBm)
+2025/07/20 01:30:57 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:30:57 Service data length: 20 bytes
+2025/07/20 01:30:57 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:30:57 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:30:57 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:30:57 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:30:57 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:30:57 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:30:57 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:30:57 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:30:57 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:30:57 HMAC verification failed
+2025/07/20 01:30:57 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:30:58 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -61 dBm)
+2025/07/20 01:30:58 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:30:58 Service data length: 20 bytes
+2025/07/20 01:30:58 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:30:58 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:30:58 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:30:58 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:30:58 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:30:58 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:30:58 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:30:58 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:30:58 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:30:58 HMAC verification failed
+2025/07/20 01:30:58 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:30:58 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -67 dBm)
+2025/07/20 01:30:58 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:30:58 Service data length: 20 bytes
+2025/07/20 01:30:58 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:30:58 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:30:58 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:30:58 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:30:58 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:30:58 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:30:58 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:30:58 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:30:58 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:30:58 HMAC verification failed
+2025/07/20 01:30:58 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:30:58 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -75 dBm)
+2025/07/20 01:30:58 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:30:58 Service data length: 20 bytes
+2025/07/20 01:30:58 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:30:58 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:30:58 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:30:58 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:30:58 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:30:58 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:30:58 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:30:58 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:30:58 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:30:58 HMAC verification failed
+2025/07/20 01:30:58 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:30:59 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -63 dBm)
+2025/07/20 01:30:59 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:30:59 Service data length: 20 bytes
+2025/07/20 01:30:59 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:30:59 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:30:59 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:30:59 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:30:59 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:30:59 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:30:59 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:30:59 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:30:59 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:30:59 HMAC verification failed
+2025/07/20 01:30:59 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:30:59 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -50 dBm)
+2025/07/20 01:30:59 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:30:59 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -63 dBm)
+2025/07/20 01:30:59 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:59   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:30:59 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:30:59   Detection method: Known Device ID
+2025/07/20 01:30:59   Device Name: 
+2025/07/20 01:30:59   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:30:59   Checking for standard service UUIDs as fallback...
+2025/07/20 01:30:59   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:30:59   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:30:59 iPad device detected without standard service data - this is expected
+2025/07/20 01:30:59 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:30:59 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -60 dBm)
+2025/07/20 01:30:59 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:30:59 Service data length: 20 bytes
+2025/07/20 01:30:59 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:30:59 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:30:59 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:30:59 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:30:59 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:30:59 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:30:59 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:30:59 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:30:59 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:30:59 HMAC verification failed
+2025/07/20 01:30:59 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:30:59 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -60 dBm)
+2025/07/20 01:30:59 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:30:59 Service data length: 20 bytes
+2025/07/20 01:30:59 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:30:59 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:30:59 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:30:59 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:30:59 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:30:59 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:30:59 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:30:59 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:30:59 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:30:59 HMAC verification failed
+2025/07/20 01:30:59 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:00 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -51 dBm)
+2025/07/20 01:31:00 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:00 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -51 dBm)
+2025/07/20 01:31:00 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:00 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -61 dBm)
+2025/07/20 01:31:00 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:00 Service data length: 20 bytes
+2025/07/20 01:31:00 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:00 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:00 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:00 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:00 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:00 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:00 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:00 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:00 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:00 HMAC verification failed
+2025/07/20 01:31:00 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:00 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -59 dBm)
+2025/07/20 01:31:00 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:00 Service data length: 20 bytes
+2025/07/20 01:31:00 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:00 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:00 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:00 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:00 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:00 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:00 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:00 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:00 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:00 HMAC verification failed
+2025/07/20 01:31:00 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:00 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -60 dBm)
+2025/07/20 01:31:00 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:00 Service data length: 20 bytes
+2025/07/20 01:31:00 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:00 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:00 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:00 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:00 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:00 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:00 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:00 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:00 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:00 HMAC verification failed
+2025/07/20 01:31:00 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:01 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -61 dBm)
+2025/07/20 01:31:01 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:01 Service data length: 20 bytes
+2025/07/20 01:31:01 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:01 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:01 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:01 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:01 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:01 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:01 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:01 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:01 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:01 HMAC verification failed
+2025/07/20 01:31:01 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:01 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -60 dBm)
+2025/07/20 01:31:01 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:01 Service data length: 20 bytes
+2025/07/20 01:31:01 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:01 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:01 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:01 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:01 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:01 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:01 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:01 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:01 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:01 HMAC verification failed
+2025/07/20 01:31:01 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:01 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -55 dBm)
+2025/07/20 01:31:01 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:01 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -54 dBm)
+2025/07/20 01:31:01 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:01 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -59 dBm)
+2025/07/20 01:31:01 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:01 Service data length: 20 bytes
+2025/07/20 01:31:01 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:01 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:01 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:01 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:01 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:01 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:01 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:01 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:01 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:01 HMAC verification failed
+2025/07/20 01:31:01 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:01 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -62 dBm)
+2025/07/20 01:31:01 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:01 Service data length: 20 bytes
+2025/07/20 01:31:01 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:01 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:01 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:01 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:01 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:01 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:01 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:01 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:01 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:01 HMAC verification failed
+2025/07/20 01:31:01 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:02 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -59 dBm)
+2025/07/20 01:31:02 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:02 Service data length: 20 bytes
+2025/07/20 01:31:02 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:02 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:02 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:02 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:02 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:02 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:02 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:02 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:02 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:02 HMAC verification failed
+2025/07/20 01:31:02 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:02 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -59 dBm)
+2025/07/20 01:31:02 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:02   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:02 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:02   Detection method: Known Device ID
+2025/07/20 01:31:02   Device Name: 
+2025/07/20 01:31:02   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:02   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:02   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:02   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:02 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:02 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:02 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -59 dBm)
+2025/07/20 01:31:02 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:02 Service data length: 20 bytes
+2025/07/20 01:31:02 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:02 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:02 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:02 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:02 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:02 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:02 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:02 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:02 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:02 HMAC verification failed
+2025/07/20 01:31:02 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:03 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -60 dBm)
+2025/07/20 01:31:03 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:03 Service data length: 20 bytes
+2025/07/20 01:31:03 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:03 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:03 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:03 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:03 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:03 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:03 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:03 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:03 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:03 HMAC verification failed
+2025/07/20 01:31:03 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:03 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -60 dBm)
+2025/07/20 01:31:03 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:03   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:03 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:03   Detection method: Known Device ID
+2025/07/20 01:31:03   Device Name: 
+2025/07/20 01:31:03   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:03   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:03   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:03   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:03 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:03 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:03 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -60 dBm)
+2025/07/20 01:31:03 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:03   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:03 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:03   Detection method: Known Device ID
+2025/07/20 01:31:03   Device Name: 
+2025/07/20 01:31:03   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:03   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:03   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:03   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:03 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:03 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:03 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -58 dBm)
+2025/07/20 01:31:03 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:03   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:03 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:03   Detection method: Known Device ID
+2025/07/20 01:31:03   Device Name: 
+2025/07/20 01:31:03   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:03   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:03   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:03   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:03 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:03 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:03 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -58 dBm)
+2025/07/20 01:31:03 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:03   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:03 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:03   Detection method: Known Device ID
+2025/07/20 01:31:03   Device Name: 
+2025/07/20 01:31:03   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:03   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:03   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:03   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:03 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:03 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:03 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -58 dBm)
+2025/07/20 01:31:03 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:03 Service data length: 20 bytes
+2025/07/20 01:31:03 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:03 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:03 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:03 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:03 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:03 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:03 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:03 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:03 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:03 HMAC verification failed
+2025/07/20 01:31:03 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:03 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -57 dBm)
+2025/07/20 01:31:03 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:03 Service data length: 20 bytes
+2025/07/20 01:31:03 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:03 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:03 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:03 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:03 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:03 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:03 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:03 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:03 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:03 HMAC verification failed
+2025/07/20 01:31:03 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:03 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -51 dBm)
+2025/07/20 01:31:03 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:03 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -51 dBm)
+2025/07/20 01:31:03 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:04 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -55 dBm)
+2025/07/20 01:31:04 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:04 Service data length: 20 bytes
+2025/07/20 01:31:04 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:04 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:04 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:04 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:04 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:04 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:04 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:04 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:04 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:04 HMAC verification failed
+2025/07/20 01:31:04 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:04 BLE Device found: 19aee4ee-891a-c9e3-f10f-1fa4021d96c0 (RSSI: -76 dBm)
+2025/07/20 01:31:04 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:04 BLE Device found: 19aee4ee-891a-c9e3-f10f-1fa4021d96c0 (RSSI: -76 dBm)
+2025/07/20 01:31:04 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:04 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -57 dBm)
+2025/07/20 01:31:04 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:04 Service data length: 20 bytes
+2025/07/20 01:31:04 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:04 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:04 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:04 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:04 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:04 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:04 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:04 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:04 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:04 HMAC verification failed
+2025/07/20 01:31:04 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:04 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -56 dBm)
+2025/07/20 01:31:04 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:04 Service data length: 20 bytes
+2025/07/20 01:31:04 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:04 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:04 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:04 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:04 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:04 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:04 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:04 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:04 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:04 HMAC verification failed
+2025/07/20 01:31:04 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:04 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -57 dBm)
+2025/07/20 01:31:04 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:04 Service data length: 20 bytes
+2025/07/20 01:31:04 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:04 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:04 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:04 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:04 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:04 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:04 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:04 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:04 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:04 HMAC verification failed
+2025/07/20 01:31:04 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:05 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -55 dBm)
+2025/07/20 01:31:05 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:05 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -55 dBm)
+2025/07/20 01:31:05 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:05 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -60 dBm)
+2025/07/20 01:31:05 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:05 Service data length: 20 bytes
+2025/07/20 01:31:05 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:05 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:05 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:05 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:05 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:05 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:05 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:05 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:05 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:05 HMAC verification failed
+2025/07/20 01:31:05 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:05 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -57 dBm)
+2025/07/20 01:31:05 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:05 Service data length: 20 bytes
+2025/07/20 01:31:05 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:05 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:05 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:05 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:05 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:05 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:05 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:05 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:05 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:05 HMAC verification failed
+2025/07/20 01:31:05 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:06 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:06 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:06 Service data length: 20 bytes
+2025/07/20 01:31:06 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:06 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:06 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:06 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:06 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:06 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:06 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:06 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:06 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:06 HMAC verification failed
+2025/07/20 01:31:06 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:06 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -53 dBm)
+2025/07/20 01:31:06 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:06 Service data length: 20 bytes
+2025/07/20 01:31:06 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:06 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:06 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:06 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:06 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:06 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:06 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:06 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:06 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:06 HMAC verification failed
+2025/07/20 01:31:06 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:06 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -49 dBm)
+2025/07/20 01:31:06 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:06 Service data length: 20 bytes
+2025/07/20 01:31:06 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:06 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:06 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:06 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:06 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:06 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:06 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:06 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:06 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:06 HMAC verification failed
+2025/07/20 01:31:06 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:06 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -46 dBm)
+2025/07/20 01:31:06 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:06 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -46 dBm)
+2025/07/20 01:31:06 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:06 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -55 dBm)
+2025/07/20 01:31:06 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:06 Service data length: 20 bytes
+2025/07/20 01:31:06 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:06 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:06 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:06 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:06 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:06 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:06 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:06 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:06 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:06 HMAC verification failed
+2025/07/20 01:31:06 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:07 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -65 dBm)
+2025/07/20 01:31:07 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:07 Service data length: 20 bytes
+2025/07/20 01:31:07 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:07 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:07 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:07 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:07 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:07 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:07 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:07 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:07 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:07 HMAC verification failed
+2025/07/20 01:31:07 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:07 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -52 dBm)
+2025/07/20 01:31:07 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:07 Service data length: 20 bytes
+2025/07/20 01:31:07 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:07 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:07 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:07 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:07 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:07 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:07 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:07 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:07 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:07 HMAC verification failed
+2025/07/20 01:31:07 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:07 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -52 dBm)
+2025/07/20 01:31:07 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:07 Service data length: 20 bytes
+2025/07/20 01:31:07 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:07 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:07 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:07 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:07 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:07 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:07 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:07 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:07 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:07 HMAC verification failed
+2025/07/20 01:31:07 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:07 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -57 dBm)
+2025/07/20 01:31:07 Found caBLE service data (UUID 0xFFF9): dc69a89fe88d0897d14c53efa8e2002d423b85ab (length: 20)
+2025/07/20 01:31:07 Service data length: 20 bytes
+2025/07/20 01:31:07 Service data (encrypted): dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:07 Attempting caBLE v2 decryption from Standard Service Data...
+2025/07/20 01:31:07 Decrypting caBLE v2 service data: dc69a89fe88d0897d14c53efa8e2002d423b85ab
+2025/07/20 01:31:07 Derived EID key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:07 AES key (first 8 bytes): 9dc9f5c21bdd94db
+2025/07/20 01:31:07 HMAC key (first 8 bytes): d310497dde2adade
+2025/07/20 01:31:07 First 16 bytes: dc69a89fe88d0897d14c53efa8e2002d
+2025/07/20 01:31:07 Last 4 bytes (tag): 423b85ab
+2025/07/20 01:31:07 Expected HMAC tag (first 4 bytes): ec5b08c9
+2025/07/20 01:31:07 HMAC verification failed
+2025/07/20 01:31:07 Failed to decrypt Standard Service Data as caBLE v2: caBLE v2 authentication/decryption failed
+2025/07/20 01:31:08 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -52 dBm)
+2025/07/20 01:31:08 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:08 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -52 dBm)
+2025/07/20 01:31:08 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:08 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -59 dBm)
+2025/07/20 01:31:08 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:08 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -55 dBm)
+2025/07/20 01:31:08 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:08 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -56 dBm)
+2025/07/20 01:31:08 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:09 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -53 dBm)
+2025/07/20 01:31:09 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:09   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:09 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:09   Detection method: Known Device ID
+2025/07/20 01:31:09   Device Name: 
+2025/07/20 01:31:09   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:09   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:09   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:09   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:09 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:09 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:09 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -53 dBm)
+2025/07/20 01:31:09 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:09   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:09 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:09   Detection method: Known Device ID
+2025/07/20 01:31:09   Device Name: 
+2025/07/20 01:31:09   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:09   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:09   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:09   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:09 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:09 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:09 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:09 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:09 BLE Device found: 19aee4ee-891a-c9e3-f10f-1fa4021d96c0 (RSSI: -78 dBm)
+2025/07/20 01:31:09 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:09 BLE Device found: 19aee4ee-891a-c9e3-f10f-1fa4021d96c0 (RSSI: -76 dBm)
+2025/07/20 01:31:09 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:09 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -60 dBm)
+2025/07/20 01:31:09 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:10 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:10 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:10 BLE Device found: e054d759-8bd6-33e2-b6fd-7f7fa542f7a7 (RSSI: -88 dBm)
+2025/07/20 01:31:10 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:10 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -49 dBm)
+2025/07/20 01:31:10 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:10 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -53 dBm)
+2025/07/20 01:31:10 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:10 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -60 dBm)
+2025/07/20 01:31:10 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:11 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:11 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:11 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -61 dBm)
+2025/07/20 01:31:11 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:11 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:11 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:12 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:12 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:12 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -58 dBm)
+2025/07/20 01:31:12 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:12 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -45 dBm)
+2025/07/20 01:31:12 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:12 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: 127 dBm)
+2025/07/20 01:31:12 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:12 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -54 dBm)
+2025/07/20 01:31:12 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:12   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:12 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:12   Detection method: Known Device ID
+2025/07/20 01:31:12   Device Name: 
+2025/07/20 01:31:12   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:12   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:12   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:12   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:12 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:12 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:12 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -54 dBm)
+2025/07/20 01:31:12 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:12   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:12 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:12   Detection method: Known Device ID
+2025/07/20 01:31:12   Device Name: 
+2025/07/20 01:31:12   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:12   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:12   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:12   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:12 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:12 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:12 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:12 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:13 BLE Device found: 19aee4ee-891a-c9e3-f10f-1fa4021d96c0 (RSSI: -88 dBm)
+2025/07/20 01:31:13 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:13 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -60 dBm)
+2025/07/20 01:31:13 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:13 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -46 dBm)
+2025/07/20 01:31:13 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:13 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -46 dBm)
+2025/07/20 01:31:13 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:13 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:13 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:14 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -60 dBm)
+2025/07/20 01:31:14 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:14 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:14 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:14 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -53 dBm)
+2025/07/20 01:31:14 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:14 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -52 dBm)
+2025/07/20 01:31:14 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:15 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -63 dBm)
+2025/07/20 01:31:15 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:15 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -52 dBm)
+2025/07/20 01:31:15 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:15 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -52 dBm)
+2025/07/20 01:31:15 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:15 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -53 dBm)
+2025/07/20 01:31:15 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:16 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -63 dBm)
+2025/07/20 01:31:16 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:16   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:16 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:16   Detection method: Known Device ID
+2025/07/20 01:31:16   Device Name: 
+2025/07/20 01:31:16   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:16   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:16   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:16   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:16 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:16 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:16 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -63 dBm)
+2025/07/20 01:31:16 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:16   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:16 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:16   Detection method: Known Device ID
+2025/07/20 01:31:16   Device Name: 
+2025/07/20 01:31:16   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:16   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:16   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:16   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:16 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:16 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:16 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -62 dBm)
+2025/07/20 01:31:16 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:16 BLE Device found: 19aee4ee-891a-c9e3-f10f-1fa4021d96c0 (RSSI: -79 dBm)
+2025/07/20 01:31:16 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:16 BLE Device found: 19aee4ee-891a-c9e3-f10f-1fa4021d96c0 (RSSI: -79 dBm)
+2025/07/20 01:31:16 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:16 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -53 dBm)
+2025/07/20 01:31:16 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:16 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -53 dBm)
+2025/07/20 01:31:16 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:16 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -63 dBm)
+2025/07/20 01:31:16 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:17 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -53 dBm)
+2025/07/20 01:31:17 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:17 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -53 dBm)
+2025/07/20 01:31:17 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:17   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:17 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:17   Detection method: Known Device ID
+2025/07/20 01:31:17   Device Name: 
+2025/07/20 01:31:17   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:17   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:17   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:17   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:17 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:17 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:17 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -53 dBm)
+2025/07/20 01:31:17 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:17   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:17 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:17   Detection method: Known Device ID
+2025/07/20 01:31:17   Device Name: 
+2025/07/20 01:31:17   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:17   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:17   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:17   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:17 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:17 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:17 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -53 dBm)
+2025/07/20 01:31:17 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:17 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -53 dBm)
+2025/07/20 01:31:17 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:17   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:17 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:17   Detection method: Known Device ID
+2025/07/20 01:31:17   Device Name: 
+2025/07/20 01:31:17   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:17   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:17   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:17   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:17 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:17 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:17 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -53 dBm)
+2025/07/20 01:31:17 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:17   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:17 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:17   Detection method: Known Device ID
+2025/07/20 01:31:17   Device Name: 
+2025/07/20 01:31:17   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:17   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:17   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:17   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:17 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:17 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:18 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -53 dBm)
+2025/07/20 01:31:18 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:18 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -45 dBm)
+2025/07/20 01:31:18 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:18 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -45 dBm)
+2025/07/20 01:31:18 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:18 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -66 dBm)
+2025/07/20 01:31:18 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:19 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -53 dBm)
+2025/07/20 01:31:19 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:19 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -53 dBm)
+2025/07/20 01:31:19 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:19 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:19 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:19 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -66 dBm)
+2025/07/20 01:31:19 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:20 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -67 dBm)
+2025/07/20 01:31:20 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:20 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -53 dBm)
+2025/07/20 01:31:20 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:21 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:21 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:21 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -70 dBm)
+2025/07/20 01:31:21 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:21 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -53 dBm)
+2025/07/20 01:31:21 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:22 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:22 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:22 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -49 dBm)
+2025/07/20 01:31:22 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:22 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -49 dBm)
+2025/07/20 01:31:22 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:22 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -69 dBm)
+2025/07/20 01:31:22 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:22 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -53 dBm)
+2025/07/20 01:31:22 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:22 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -53 dBm)
+2025/07/20 01:31:22 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:23 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -69 dBm)
+2025/07/20 01:31:23 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:23   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:23 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:23   Detection method: Known Device ID
+2025/07/20 01:31:23   Device Name: 
+2025/07/20 01:31:23   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:23   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:23   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:23   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:23 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:23 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:23 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -69 dBm)
+2025/07/20 01:31:23 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:23   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:23 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:23   Detection method: Known Device ID
+2025/07/20 01:31:23   Device Name: 
+2025/07/20 01:31:23   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:23   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:23   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:23   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:23 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:23 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:23 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -44 dBm)
+2025/07/20 01:31:23 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:23 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -44 dBm)
+2025/07/20 01:31:23 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:23 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:23 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:23 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:23 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:24 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -68 dBm)
+2025/07/20 01:31:24 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:24 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -53 dBm)
+2025/07/20 01:31:24 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:24 BLE Device found: 19aee4ee-891a-c9e3-f10f-1fa4021d96c0 (RSSI: -85 dBm)
+2025/07/20 01:31:24 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:24 BLE Device found: 19aee4ee-891a-c9e3-f10f-1fa4021d96c0 (RSSI: -86 dBm)
+2025/07/20 01:31:24 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:24 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -54 dBm)
+2025/07/20 01:31:24 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:24 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -53 dBm)
+2025/07/20 01:31:24 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:24 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -53 dBm)
+2025/07/20 01:31:24 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:24 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:24 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:25 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -44 dBm)
+2025/07/20 01:31:25 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:25 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -44 dBm)
+2025/07/20 01:31:25 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:25 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -68 dBm)
+2025/07/20 01:31:25 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:25 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -53 dBm)
+2025/07/20 01:31:25 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:25 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:25 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:25 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -49 dBm)
+2025/07/20 01:31:25 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:25 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -49 dBm)
+2025/07/20 01:31:25 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:25 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -68 dBm)
+2025/07/20 01:31:25 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:26 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:26 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:26 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -67 dBm)
+2025/07/20 01:31:26 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:27 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:27 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:27 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -53 dBm)
+2025/07/20 01:31:27 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:27   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:27 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:27   Detection method: Known Device ID
+2025/07/20 01:31:27   Device Name: 
+2025/07/20 01:31:27   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:27   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:27   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:27   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:27 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:27 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:27 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -53 dBm)
+2025/07/20 01:31:27 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:27   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:27 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:27   Detection method: Known Device ID
+2025/07/20 01:31:27   Device Name: 
+2025/07/20 01:31:27   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:27   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:27   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:27   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:27 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:27 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:27 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:27 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:27 BLE Device found: 19aee4ee-891a-c9e3-f10f-1fa4021d96c0 (RSSI: -86 dBm)
+2025/07/20 01:31:27 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:27 BLE Device found: 19aee4ee-891a-c9e3-f10f-1fa4021d96c0 (RSSI: -87 dBm)
+2025/07/20 01:31:27 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:27 BLE Device found: 19aee4ee-891a-c9e3-f10f-1fa4021d96c0 (RSSI: -77 dBm)
+2025/07/20 01:31:27 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:28 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:28 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:28 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -50 dBm)
+2025/07/20 01:31:28 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:28 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:28 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:28 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -67 dBm)
+2025/07/20 01:31:28 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:28 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -53 dBm)
+2025/07/20 01:31:28 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:29 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:29 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:29 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -66 dBm)
+2025/07/20 01:31:29 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:29 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:29 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:30 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:30 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:30 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -64 dBm)
+2025/07/20 01:31:30 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:30 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -54 dBm)
+2025/07/20 01:31:30 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:30   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:30 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:30   Detection method: Known Device ID
+2025/07/20 01:31:30   Device Name: 
+2025/07/20 01:31:30   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:30   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:30   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:30   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:30 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:30 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:30 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -54 dBm)
+2025/07/20 01:31:30 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:30   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:30 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:30   Detection method: Known Device ID
+2025/07/20 01:31:30   Device Name: 
+2025/07/20 01:31:30   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:30   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:30   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:30   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:30 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:30 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:30 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -53 dBm)
+2025/07/20 01:31:30 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:31 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -50 dBm)
+2025/07/20 01:31:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:31 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -49 dBm)
+2025/07/20 01:31:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:31 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:31 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:31 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:31 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:32 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -45 dBm)
+2025/07/20 01:31:32 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:32 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -45 dBm)
+2025/07/20 01:31:32 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:32 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -54 dBm)
+2025/07/20 01:31:32 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:32 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -55 dBm)
+2025/07/20 01:31:32 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:33 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -51 dBm)
+2025/07/20 01:31:33 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:33 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -48 dBm)
+2025/07/20 01:31:33 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:33 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -48 dBm)
+2025/07/20 01:31:33 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:33 BLE Device found: 7d0dde12-3d0c-6b15-ca85-384bfc6e4bf7 (RSSI: -55 dBm)
+2025/07/20 01:31:33 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:33 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -56 dBm)
+2025/07/20 01:31:33 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:33   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:33 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:33   Detection method: Known Device ID
+2025/07/20 01:31:33   Device Name: 
+2025/07/20 01:31:33   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:33   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:33   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:33   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:33 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:33 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:33 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -56 dBm)
+2025/07/20 01:31:33 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:33   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:33 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:33   Detection method: Known Device ID
+2025/07/20 01:31:33   Device Name: 
+2025/07/20 01:31:33   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:33   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:33   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:33   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:33 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:33 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:33 BLE Device found: e8cb0ec9-a4dd-9579-ba9c-1a65c097a79d (RSSI: -56 dBm)
+2025/07/20 01:31:33 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:34 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -47 dBm)
+2025/07/20 01:31:34 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:34 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -47 dBm)
+2025/07/20 01:31:34 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:34 BLE Device found: e8cb0ec9-a4dd-9579-ba9c-1a65c097a79d (RSSI: -59 dBm)
+2025/07/20 01:31:34 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:34 BLE Device found: e8cb0ec9-a4dd-9579-ba9c-1a65c097a79d (RSSI: -60 dBm)
+2025/07/20 01:31:34 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:34 BLE Device found: e8cb0ec9-a4dd-9579-ba9c-1a65c097a79d (RSSI: -64 dBm)
+2025/07/20 01:31:34 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:34 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -48 dBm)
+2025/07/20 01:31:34 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:34 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -48 dBm)
+2025/07/20 01:31:34 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:34 BLE Device found: e8cb0ec9-a4dd-9579-ba9c-1a65c097a79d (RSSI: -60 dBm)
+2025/07/20 01:31:34 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:34 BLE Device found: e8cb0ec9-a4dd-9579-ba9c-1a65c097a79d (RSSI: -62 dBm)
+2025/07/20 01:31:34 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:34 BLE Device found: e8cb0ec9-a4dd-9579-ba9c-1a65c097a79d (RSSI: -62 dBm)
+2025/07/20 01:31:34 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:34 BLE Device found: e8cb0ec9-a4dd-9579-ba9c-1a65c097a79d (RSSI: -67 dBm)
+2025/07/20 01:31:34 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:34 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -66 dBm)
+2025/07/20 01:31:34 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:34   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:34 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:34   Detection method: Known Device ID
+2025/07/20 01:31:34   Device Name: 
+2025/07/20 01:31:34   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:34   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:34   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:34   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:34 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:34 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:34 BLE Device found: e8cb0ec9-a4dd-9579-ba9c-1a65c097a79d (RSSI: -57 dBm)
+2025/07/20 01:31:34 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:34 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -57 dBm)
+2025/07/20 01:31:34 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:34   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:34 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:34   Detection method: Known Device ID
+2025/07/20 01:31:34   Device Name: 
+2025/07/20 01:31:34   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:34   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:34   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:34   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:34 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:34 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:34 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -57 dBm)
+2025/07/20 01:31:34 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:34   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:34 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:34   Detection method: Known Device ID
+2025/07/20 01:31:34   Device Name: 
+2025/07/20 01:31:34   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:34   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:34   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:34   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:34 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:34 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:34 BLE Device found: e8cb0ec9-a4dd-9579-ba9c-1a65c097a79d (RSSI: -57 dBm)
+2025/07/20 01:31:34 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:34 BLE Device found: e8cb0ec9-a4dd-9579-ba9c-1a65c097a79d (RSSI: -63 dBm)
+2025/07/20 01:31:34 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:34 BLE Device found: e8cb0ec9-a4dd-9579-ba9c-1a65c097a79d (RSSI: -50 dBm)
+2025/07/20 01:31:34 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:34 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -51 dBm)
+2025/07/20 01:31:34 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:34 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -51 dBm)
+2025/07/20 01:31:34 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:34 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -57 dBm)
+2025/07/20 01:31:34 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:34   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:34 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:34   Detection method: Known Device ID
+2025/07/20 01:31:34   Device Name: 
+2025/07/20 01:31:34   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:34   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:34   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:34   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:34 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:34 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:34 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -57 dBm)
+2025/07/20 01:31:34 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:34   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:34 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:34   Detection method: Known Device ID
+2025/07/20 01:31:34   Device Name: 
+2025/07/20 01:31:34   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:34   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:34   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:34   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:34 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:34 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:34 BLE Device found: e8cb0ec9-a4dd-9579-ba9c-1a65c097a79d (RSSI: -57 dBm)
+2025/07/20 01:31:34 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:35 BLE Device found: e8cb0ec9-a4dd-9579-ba9c-1a65c097a79d (RSSI: -43 dBm)
+2025/07/20 01:31:35 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:35 BLE Device found: e8cb0ec9-a4dd-9579-ba9c-1a65c097a79d (RSSI: -41 dBm)
+2025/07/20 01:31:35 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:35 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -52 dBm)
+2025/07/20 01:31:35 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:35 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -51 dBm)
+2025/07/20 01:31:35 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:36 BLE Device found: e8cb0ec9-a4dd-9579-ba9c-1a65c097a79d (RSSI: -36 dBm)
+2025/07/20 01:31:36 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:36 BLE Device found: e8cb0ec9-a4dd-9579-ba9c-1a65c097a79d (RSSI: -34 dBm)
+2025/07/20 01:31:36 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:36 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -50 dBm)
+2025/07/20 01:31:36 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:36 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -50 dBm)
+2025/07/20 01:31:36 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:36 BLE Device found: 19aee4ee-891a-c9e3-f10f-1fa4021d96c0 (RSSI: -84 dBm)
+2025/07/20 01:31:36 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:36 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -32 dBm)
+2025/07/20 01:31:36 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:36   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:36 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:36   Detection method: Known Device ID
+2025/07/20 01:31:36   Device Name: 
+2025/07/20 01:31:36   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:36   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:36   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:36   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:36 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:36 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:36 BLE Device found: 394c3434-49ab-2b33-5bb4-228481792d55 (RSSI: -32 dBm)
+2025/07/20 01:31:36 *** DETECTED iPAD DEVICE IN TUNNEL SCAN: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:36   Will attempt iPad-specific caBLE extraction
+2025/07/20 01:31:36 *** DETECTED iPAD DEVICE: 394c3434-49ab-2b33-5bb4-228481792d55 ***
+2025/07/20 01:31:36   Detection method: Known Device ID
+2025/07/20 01:31:36   Device Name: 
+2025/07/20 01:31:36   Note: iPad devices embed caBLE info in Apple Manufacturer Data (Company ID 76)
+2025/07/20 01:31:36   Checking for standard service UUIDs as fallback...
+2025/07/20 01:31:36   Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented
+2025/07/20 01:31:36   Need to parse raw advertisement payload for Company ID 76 (Apple)
+2025/07/20 01:31:36 iPad device detected without standard service data - this is expected
+2025/07/20 01:31:36 iPad uses Apple Manufacturer Data embedding (already attempted above)
+2025/07/20 01:31:36 BLE Device found: e8cb0ec9-a4dd-9579-ba9c-1a65c097a79d (RSSI: -33 dBm)
+2025/07/20 01:31:36 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:36 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -47 dBm)
+2025/07/20 01:31:36 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:36 BLE Device found: 7347cbe2-92bd-127a-abf5-45cbd8cf50dc (RSSI: -47 dBm)
+2025/07/20 01:31:36 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:37 BLE Device found: e8cb0ec9-a4dd-9579-ba9c-1a65c097a79d (RSSI: -36 dBm)
+2025/07/20 01:31:37 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:37 BLE Device found: e8cb0ec9-a4dd-9579-ba9c-1a65c097a79d (RSSI: -35 dBm)
+2025/07/20 01:31:37 Service data insufficient for caBLE v2 (got 0 bytes, need 20)
+2025/07/20 01:31:37 BLE Device found: e8cb0ec9-a4dd-9579-ba9c-1a65c097a79d (RSSI: -33 dBm)

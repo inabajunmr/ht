@@ -282,3 +282,61 @@ func TestReservedBitsValidation(t *testing.T) {
 		})
 	}
 }
+
+// TestIPadAppleManufacturerData tests iPad Apple manufacturer data patterns
+func TestIPadAppleManufacturerData(t *testing.T) {
+	testCases := []struct {
+		name           string
+		manufacturerData string
+		description    string
+	}{
+		{
+			name:           "iPad normal state",
+			manufacturerData: "10054b18c52d68",
+			description:    "iPad in normal advertising state",
+		},
+		{
+			name:           "iPad during WebAuthn",
+			manufacturerData: "10054718c52d68", 
+			description:    "iPad during WebAuthn QR code scanning",
+		},
+		{
+			name:           "iPad WebAuthn variant 1",
+			manufacturerData: "100502188d8c4f",
+			description:    "iPad WebAuthn activity variant",
+		},
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.name, func(t *testing.T) {
+			// Decode manufacturer data
+			data, err := hex.DecodeString(tc.manufacturerData)
+			if err != nil {
+				t.Fatalf("Failed to decode manufacturer data: %v", err)
+			}
+
+			t.Logf("Testing %s: %s", tc.description, tc.manufacturerData)
+			t.Logf("  Raw data: %x", data)
+			t.Logf("  Length: %d bytes", len(data))
+
+			if len(data) >= 2 {
+				t.Logf("  Type/Subtype: %02x %02x", data[0], data[1])
+			}
+			
+			if len(data) > 2 {
+				remainder := data[2:]
+				t.Logf("  Remainder: %x", remainder)
+				t.Logf("  Remainder length: %d bytes", len(remainder))
+				
+				// Check if remainder has changing patterns that might indicate caBLE
+				if len(remainder) >= 3 {
+					t.Logf("  Potential caBLE indicator bytes: %x", remainder[:3])
+				}
+			}
+
+			// Note: We expect these to not decrypt as standard caBLE v2
+			// iPad uses a different embedding format
+			t.Logf("  Note: iPad uses proprietary Apple embedding, not standard caBLE v2")
+		})
+	}
+}
