@@ -178,3 +178,31 @@ func UnpackDecryptedAdvert(plaintext [CableV2PlaintextLength]byte) (nonce [10]by
 	encodedTunnelServerDomain = uint16(plaintext[14]) | (uint16(plaintext[15]) << 8)
 	return
 }
+
+// encryptServiceData encrypts plaintext using caBLE v2 AES-ECB + HMAC (reverse of trialDecrypt)
+func encryptServiceData(eidKey *[CableV2EIDKeyLength]byte, plaintext [CableV2PlaintextLength]byte) ([]byte, error) {
+	aesKey := eidKey[:CableV2AESKeyLength]
+	hmacKey := eidKey[CableV2AESKeyLength:]
+	
+	// Create AES cipher
+	block, err := aes.NewCipher(aesKey)
+	if err != nil {
+		return nil, err
+	}
+	
+	// Encrypt first 16 bytes with AES-ECB
+	var ciphertext [16]byte
+	block.Encrypt(ciphertext[:], plaintext[:16])
+	
+	// Calculate HMAC tag over encrypted data
+	h := hmac.New(sha256.New, hmacKey)
+	h.Write(ciphertext[:])
+	tag := h.Sum(nil)
+	
+	// Combine ciphertext + tag (first 4 bytes)
+	result := make([]byte, 20)
+	copy(result[:16], ciphertext[:])
+	copy(result[16:], tag[:4])
+	
+	return result, nil
+}
