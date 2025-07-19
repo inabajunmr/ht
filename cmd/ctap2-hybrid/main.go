@@ -76,8 +76,10 @@ func runHybridTransport(ctx context.Context, transport *ctap2.HybridTransport) e
 	
 	fmt.Printf("Received tunnel service information:\n")
 	fmt.Printf("  Tunnel URL: %s\n", tunnelInfo.TunnelURL)
+	fmt.Printf("  Connection Nonce: %x\n", tunnelInfo.ConnectionNonce)
 	fmt.Printf("  Routing ID: %x\n", tunnelInfo.RoutingID)
-	fmt.Printf("  Tunnel ID: %x\n", tunnelInfo.TunnelID)
+	fmt.Printf("  Tunnel Service ID: %x\n", tunnelInfo.TunnelServiceID)
+	fmt.Printf("  Encoded Tunnel Domain: %d\n", tunnelInfo.EncodedTunnelDomain)
 	fmt.Printf("  Additional Data: %x\n", tunnelInfo.AdditionalData)
 	
 	// Step 4: Setup tunnel service with information from BLE advertisement
@@ -87,7 +89,7 @@ func runHybridTransport(ctx context.Context, transport *ctap2.HybridTransport) e
 	}
 	
 	// Update tunnel client with advertisement information
-	tunnelClient.SetTunnelInfo(tunnelInfo.RoutingID, tunnelInfo.TunnelID)
+	tunnelClient.SetTunnelInfo(tunnelInfo.RoutingID, tunnelInfo.ConnectionNonce)
 	
 	fmt.Println("Tunnel service information received, but not connecting (as requested)")
 	fmt.Println("Implementation complete - ready for actual tunnel connection")

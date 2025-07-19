@@ -35,10 +35,12 @@ const (
 
 // TunnelInfo contains tunnel service information from BLE advertisement
 type TunnelInfo struct {
-	TunnelURL      string
-	RoutingID      []byte
-	TunnelID       []byte
-	AdditionalData []byte
+	TunnelURL             string
+	ConnectionNonce       []byte  // 10-byte connection nonce (proves proximity)
+	RoutingID             []byte  // 3-byte routing ID
+	TunnelServiceID       []byte  // 2-byte tunnel service identifier
+	EncodedTunnelDomain   uint16  // Tunnel service domain (derived from service ID)
+	AdditionalData        []byte  // Additional data (if any)
 }
 
 // Advertiser handles BLE advertising for CTAP2 hybrid transport
@@ -529,55 +531,76 @@ func (s *Scanner) WaitForTunnelAdvertisement(ctx context.Context) (*TunnelInfo, 
 	
 	// Channel to receive tunnel information
 	tunnelInfoChan := make(chan *TunnelInfo, 1)
+	scanErrChan := make(chan error, 1)
 	
-	// Start scanning with tunnel info detection
-	err := s.adapter.Scan(func(adapter *bluetooth.Adapter, result bluetooth.ScanResult) {
-		deviceID := result.Address.String()
-		rssi := result.RSSI
+	// Start scanning in a goroutine that respects context cancellation
+	go func() {
+		defer func() {
+			if err := s.adapter.StopScan(); err != nil {
+				log.Printf("Error stopping scan: %v", err)
+			}
+		}()
 		
-		// Log device discovery
-		log.Printf("BLE Device found: %s (RSSI: %d dBm)", deviceID, rssi)
-		
-		// Special check for device found by Python scanner
-		if deviceID == "121b296f-41b8-90a8-f92f-355b91b6aa55" || deviceID == "121B296F-41B8-90A8-F92F-355B91B6AA55" {
-			log.Printf("*** FOUND TARGET DEVICE FROM PYTHON SCANNER: %s ***", deviceID)
+		err := s.adapter.Scan(func(adapter *bluetooth.Adapter, result bluetooth.ScanResult) {
+			// Check if context is cancelled
+			select {
+			case <-ctx.Done():
+				return
+			default:
+			}
 			
-			// Force check for both UUIDs
-			fidoServiceUUID, _ := bluetooth.ParseUUID(FIDOServiceUUID)
-			cableServiceUUID, _ := bluetooth.ParseUUID(CableServiceUUID)
+			deviceID := result.Address.String()
+			rssi := result.RSSI
 			
-			hasFIDO := result.AdvertisementPayload.HasServiceUUID(fidoServiceUUID)
-			hasCable := result.AdvertisementPayload.HasServiceUUID(cableServiceUUID)
+			// Log device discovery
+			log.Printf("BLE Device found: %s (RSSI: %d dBm)", deviceID, rssi)
 			
-			log.Printf("  FIDO UUID check: %v", hasFIDO)
-			log.Printf("  caBLE UUID check: %v", hasCable)
-			
-			if hasFIDO || hasCable {
-				log.Printf("*** SERVICE UUID DETECTED ON TARGET DEVICE ***")
-				if s.processTunnelAdvertisement(result, tunnelInfoChan) {
-					log.Printf("Tunnel service information detected from target device: %s", deviceID)
-					return
+			// Special check for device found by Python scanner
+			if deviceID == "121b296f-41b8-90a8-f92f-355b91b6aa55" || deviceID == "121B296F-41B8-90A8-F92F-355B91B6AA55" {
+				log.Printf("*** FOUND TARGET DEVICE FROM PYTHON SCANNER: %s ***", deviceID)
+				
+				// Force check for both UUIDs
+				fidoServiceUUID, _ := bluetooth.ParseUUID(FIDOServiceUUID)
+				cableServiceUUID, _ := bluetooth.ParseUUID(CableServiceUUID)
+				
+				hasFIDO := result.AdvertisementPayload.HasServiceUUID(fidoServiceUUID)
+				hasCable := result.AdvertisementPayload.HasServiceUUID(cableServiceUUID)
+				
+				log.Printf("  FIDO UUID check: %v", hasFIDO)
+				log.Printf("  caBLE UUID check: %v", hasCable)
+				
+				if hasFIDO || hasCable {
+					log.Printf("*** SERVICE UUID DETECTED ON TARGET DEVICE ***")
+					if s.processTunnelAdvertisement(result, tunnelInfoChan) {
+						log.Printf("Tunnel service information detected from target device: %s", deviceID)
+						return
+					}
 				}
 			}
-		}
+			
+			// Check for FIDO service data
+			if s.processTunnelAdvertisement(result, tunnelInfoChan) {
+				log.Printf("Tunnel service information detected from device: %s", deviceID)
+			}
+		})
 		
-		// Check for FIDO service data
-		if s.processTunnelAdvertisement(result, tunnelInfoChan) {
-			log.Printf("Tunnel service information detected from device: %s", deviceID)
+		if err != nil {
+			select {
+			case scanErrChan <- err:
+			case <-ctx.Done():
+			}
 		}
-	})
+	}()
 	
-	if err != nil {
-		return nil, fmt.Errorf("failed to start BLE scan: %w", err)
-	}
-	
-	// Wait for tunnel info or context cancellation
+	// Wait for tunnel info, scan error, or context cancellation
 	select {
 	case tunnelInfo := <-tunnelInfoChan:
-		s.adapter.StopScan()
+		log.Printf("Successfully received tunnel info, stopping scan...")
 		return tunnelInfo, nil
+	case err := <-scanErrChan:
+		return nil, fmt.Errorf("failed to start BLE scan: %w", err)
 	case <-ctx.Done():
-		s.adapter.StopScan()
+		log.Printf("Context cancelled, stopping scan...")
 		return nil, ctx.Err()
 	}
 }
@@ -635,34 +658,62 @@ func (s *Scanner) processTunnelAdvertisement(result bluetooth.ScanResult, tunnel
 	log.Printf("Service data length: %d bytes", len(serviceData))
 	log.Printf("Service data (encrypted): %x", serviceData)
 	
-	// TODO: Decrypt caBLE v2 service data using QR secret
-	// For now, parse as-is (encrypted data) for demonstration
-	nonce := serviceData[0:8]
-	routingID := serviceData[8:11]
-	tunnelService := serviceData[11:13]
-	additionalData := serviceData[13:]
+	// Decrypt caBLE v2 service data using QR secret
+	decryptor := NewCableV2Decryptor(s.qrSecret)
+	decryptedData, err := decryptor.DecryptServiceData(serviceData)
 	
-	log.Printf("WARNING: Parsing encrypted data - needs decryption")
-	log.Printf("  Encrypted Nonce: %x", nonce)
-	log.Printf("  Encrypted Routing ID: %x", routingID)
-	log.Printf("  Encrypted Tunnel Service: %x", tunnelService)
-	log.Printf("  Encrypted Additional Data: %x", additionalData)
+	var nonce, routingID, tunnelService, additionalData []byte
+	var tunnelURL string
 	
-	// Map tunnel service identifier to URL (placeholder)
-	tunnelURL := s.getTunnelURL(tunnelService)
+	if err != nil {
+		log.Printf("Failed to decrypt caBLE v2 service data: %v", err)
+		log.Printf("Falling back to parsing encrypted data for demonstration")
+		
+		// Fallback: parse encrypted data as-is
+		nonce = serviceData[0:8]
+		routingID = serviceData[8:11]
+		tunnelService = serviceData[11:13]
+		additionalData = serviceData[13:]
+		
+		log.Printf("WARNING: Using encrypted data (fallback)")
+		log.Printf("  Encrypted Nonce: %x", nonce)
+		log.Printf("  Encrypted Routing ID: %x", routingID)
+		log.Printf("  Encrypted Tunnel Service: %x", tunnelService)
+		log.Printf("  Encrypted Additional Data: %x", additionalData)
+	} else {
+		log.Printf("Successfully decrypted caBLE v2 service data: %x", decryptedData)
+		
+		// Parse decrypted data according to caBLE v2 specification
+		var parseErr error
+		nonce, routingID, tunnelService, additionalData, parseErr = ParseDecryptedServiceData(decryptedData)
+		if parseErr != nil {
+			log.Printf("Failed to parse decrypted service data: %v", parseErr)
+			return false
+		}
+		
+		log.Printf("Decrypted caBLE v2 advertisement:")
+		log.Printf("  Nonce: %x", nonce)
+		log.Printf("  Routing ID: %x", routingID)
+		log.Printf("  Tunnel Service: %x", tunnelService)
+		log.Printf("  Additional Data: %x", additionalData)
+	}
 	
-	// Generate tunnel ID
-	tunnelID := make([]byte, 16)
-	copy(tunnelID, nonce)
-	if len(additionalData) > 0 {
-		copy(tunnelID[8:], additionalData[:min(8, len(additionalData))])
+	// Map tunnel service identifier to URL
+	tunnelURL = s.getTunnelURL(tunnelService)
+	
+	// Extract tunnel service domain from 2-byte identifier
+	var encodedTunnelDomain uint16
+	if len(tunnelService) >= 2 {
+		encodedTunnelDomain = uint16(tunnelService[0]) | (uint16(tunnelService[1]) << 8)
 	}
 	
 	tunnelInfo := &TunnelInfo{
-		TunnelURL:      tunnelURL,
-		RoutingID:      routingID,
-		TunnelID:       tunnelID,
-		AdditionalData: additionalData,
+		TunnelURL:           tunnelURL,
+		ConnectionNonce:     nonce,                    // 10-byte connection nonce
+		RoutingID:           routingID,                // 3-byte routing ID  
+		TunnelServiceID:     tunnelService,            // 2-byte tunnel service identifier
+		EncodedTunnelDomain: encodedTunnelDomain,      // uint16 tunnel domain
+		AdditionalData:      additionalData,           // Additional data (if any)
 	}
 	
 	// Send tunnel info to channel
