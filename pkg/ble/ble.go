@@ -85,9 +85,7 @@ func NewScanner(qrSecret []byte) (*Scanner, error) {
 
 	// Enable BLE stack
 	adapter := bluetooth.DefaultAdapter
-	if err := adapter.Enable(); err != nil {
-		return nil, fmt.Errorf("failed to enable bluetooth: %w", err)
-	}
+	must("enable BLE stack", adapter.Enable())
 
 	// Create log directory
 	logDir := "log"
@@ -757,12 +755,17 @@ func (s *Scanner) processTunnelAdvertisement(result bluetooth.ScanResult, tunnel
 		log.Printf("Found caBLE service advertisement from device: %s", result.Address.String())
 	}
 	
-	// Extract service data using existing method
+	// Extract service data using enhanced method
 	var serviceData []byte
 	if hasFIDOService {
-		serviceData = s.extractFIDOServiceData(result.AdvertisementPayload)
+		serviceData = s.extractFIDOServiceDataEnhanced(result.AdvertisementPayload)
 	} else if hasCableService {
-		serviceData = s.extractCableServiceData(result.AdvertisementPayload)
+		serviceData = s.extractCableServiceDataEnhanced(result.AdvertisementPayload)
+	}
+	
+	// If no service data found using enhanced methods, try fallback
+	if serviceData == nil {
+		serviceData = s.getExtendedServiceDataEnhanced(result)
 	}
 	
 	if serviceData == nil || len(serviceData) < 20 {
@@ -862,4 +865,11 @@ func (s *Scanner) getTunnelURL(tunnelService []byte) string {
 		}
 	}
 	return "cable.ua5v.com"
+}
+
+// Helper function from TinyGo Bluetooth examples
+func must(action string, err error) {
+	if err != nil {
+		panic("failed to " + action + ": " + err.Error())
+	}
 }
