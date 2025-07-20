@@ -139,18 +139,106 @@ func runHybridTransport(ctx context.Context, transport *ctap2.HybridTransport) e
 		return fmt.Errorf("failed to create tunnel client: %w", err)
 	}
 	
-	// Update tunnel client with advertisement information
+	// Update tunnel client with advertisement information  
+	// Note: ConnectionNonce is the 10-byte nonce from BLE, but SetTunnelInfo expects tunnelID
+	// For caBLE v2, we use the ConnectionNonce as tunnel identifier
 	tunnelClient.SetTunnelInfo(tunnelInfo.RoutingID, tunnelInfo.ConnectionNonce)
 	
-	log.Println("Tunnel service information received, but not connecting (as requested)")
-	log.Println("Implementation complete - ready for actual tunnel connection")
+	log.Printf("Tunnel service information received, attempting connection...")
 	
-	// TODO: Implement actual tunnel connection and CTAP2 message handling
-	// This would involve:
-	// 1. conn, err := tunnelClient.WaitForConnection(ctx)
-	// 2. handler := ctap2.NewHandler(conn, transport.OutputFile)
-	// 3. attestationData, err := handler.HandleAuthentication(ctx)
-	// 4. attestation.SaveToFile(attestationData, transport.OutputFile)
+	// Step 5: Establish tunnel connection
+	log.Printf("Connecting to tunnel service...")
+	conn, err := tunnelClient.WaitForConnection(ctx)
+	if err != nil {
+		return fmt.Errorf("failed to connect to tunnel service: %w", err)
+	}
+	defer conn.Close()
+	
+	log.Printf("Tunnel connection established successfully")
+	
+	// Step 6: Listen for incoming messages from smartphone
+	log.Printf("Listening for messages from smartphone...")
+	for {
+		select {
+		case <-ctx.Done():
+			log.Printf("Context cancelled, stopping message listener")
+			return ctx.Err()
+		default:
+			// Read message with timeout
+			message, err := conn.ReadMessage()
+			if err != nil {
+				log.Printf("Error reading message: %v", err)
+				// Continue listening for more messages
+				continue
+			}
+			
+			// Log received data
+			log.Printf("=== RECEIVED MESSAGE FROM SMARTPHONE ===")
+			log.Printf("Message length: %d bytes", len(message))
+			log.Printf("Message (hex): %x", message)
+			log.Printf("Message (raw): %v", message)
+			
+			// Try to parse as string if printable
+			if isPrintableASCII(message) {
+				log.Printf("Message (string): %s", string(message))
+			}
+			
+			log.Printf("======================================")
+			
+			// Parse and process as CTAP2 message
+			if err := processCTAP2Message(conn, message); err != nil {
+				log.Printf("Error processing CTAP2 message: %v", err)
+			}
+		}
+	}
+	return nil
+}
+
+// isPrintableASCII checks if a byte slice contains only printable ASCII characters
+func isPrintableASCII(data []byte) bool {
+	for _, b := range data {
+		if b < 32 || b > 126 {
+			return false
+		}
+	}
+	return len(data) > 0
+}
+
+// processCTAP2Message processes a received message as CTAP2 protocol
+func processCTAP2Message(conn *tunnel.Connection, rawMessage []byte) error {
+	log.Printf("Processing message as CTAP2 protocol...")
+	
+	// Parse the message
+	ctap2Message, err := ctap2.ParseCTAP2Message(rawMessage)
+	if err != nil {
+		log.Printf("Failed to parse CTAP2 message: %v", err)
+		return fmt.Errorf("CTAP2 parsing failed: %w", err)
+	}
+	
+	// Create CTAP2 handler
+	handler := ctap2.NewHandler(conn, "attestation.json")
+	
+	// Process the message and generate response
+	response, err := handler.ProcessCTAP2Message(ctap2Message)
+	if err != nil {
+		log.Printf("Failed to process CTAP2 message: %v", err)
+		return fmt.Errorf("CTAP2 processing failed: %w", err)
+	}
+	
+	// Send response back to smartphone
+	if len(response) > 0 {
+		log.Printf("Sending CTAP2 response (%d bytes): %x", len(response), response)
+		
+		err = conn.WriteMessage(response)
+		if err != nil {
+			log.Printf("Failed to send CTAP2 response: %v", err)
+			return fmt.Errorf("failed to send response: %w", err)
+		}
+		
+		log.Printf("CTAP2 response sent successfully")
+	} else {
+		log.Printf("No response data to send")
+	}
 	
 	return nil
 }

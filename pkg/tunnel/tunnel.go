@@ -4,11 +4,13 @@ import (
 	"context"
 	"crypto/rand"
 	"crypto/sha256"
+	"encoding/base64"
 	"encoding/binary"
 	"encoding/hex"
 	"fmt"
+	"io"
 	"log"
-	"net/http"
+	"strings"
 	"time"
 
 	"github.com/gorilla/websocket"
@@ -48,11 +50,12 @@ func NewClient(tunnelURL string, privateKey []byte, publicKey []byte, qrSecret [
 		return nil, fmt.Errorf("QR secret must be 16 bytes, got %d", len(qrSecret))
 	}
 
-	// Generate tunnel ID and routing ID
-	tunnelID := make([]byte, 16)
-	routingID := make([]byte, 16)
-	rand.Read(tunnelID)
-	rand.Read(routingID)
+	// Derive tunnel ID from QR secret according to caBLE specification
+	// This is the 128-bit identifier that the tunnel service recognizes
+	tunnelID, err := deriveTunnelID(qrSecret)
+	if err != nil {
+		return nil, fmt.Errorf("failed to derive tunnel ID: %w", err)
+	}
 
 	return &Client{
 		tunnelURL:  tunnelURL,
@@ -60,31 +63,156 @@ func NewClient(tunnelURL string, privateKey []byte, publicKey []byte, qrSecret [
 		publicKey:  publicKey,
 		qrSecret:   qrSecret,
 		tunnelID:   tunnelID,
-		routingID:  routingID,
+		routingID:  nil, // Will be set from BLE advertisement
 	}, nil
+}
+
+// deriveTunnelID derives the 128-bit tunnel ID from QR secret using HKDF
+// according to caBLE specification with keyPurposeTunnelID = 2
+func deriveTunnelID(qrSecret []byte) ([]byte, error) {
+	// Use proper caBLE v2 key derivation with purpose = 2 (keyPurposeTunnelID)
+	// This matches the specification: derive(tunnelID[:], qrSecret[:], nil, keyPurposeTunnelID)
+	var purpose32 [4]byte
+	purpose32[0] = byte(2) // keyPurposeTunnelID = 2
+	// purpose32[1], purpose32[2], purpose32[3] remain zero
+	
+	hkdfReader := hkdf.New(sha256.New, qrSecret, nil, purpose32[:])
+	
+	tunnelID := make([]byte, 16) // 128 bits
+	_, err := io.ReadFull(hkdfReader, tunnelID)
+	if err != nil {
+		return nil, fmt.Errorf("HKDF derivation failed: %w", err)
+	}
+	
+	log.Printf("Derived tunnel ID from QR secret (purpose=2): %x", tunnelID)
+	return tunnelID, nil
 }
 
 // WaitForConnection waits for a connection from the authenticator
 func (c *Client) WaitForConnection(ctx context.Context) (*Connection, error) {
 	// Construct WebSocket URL following Chromium's caBLE v2 format
-	// wss://[domain]/cable/connect/[routing-id]/[tunnel-id]
-	tunnelIDHex := hex.EncodeToString(c.tunnelID)
-	routingIDHex := hex.EncodeToString(c.routingID)
+	// Based on Chromium source analysis and cable.google.com expected format:
+	// wss://domain.googlevideo.com/connect/[base64-encoded-routing-id]/[base64-encoded-tunnel-id]
+	// OR: wss://domain/connect/[routing-id-hex]/[tunnel-id-hex]
 	
-	WSURL := fmt.Sprintf("wss://%s/cable/connect/%s/%s", c.tunnelURL, routingIDHex, tunnelIDHex)
-	log.Printf("Connecting to tunnel service: %s", WSURL)
-
-	// Set up WebSocket connection with proper headers
-	header := http.Header{}
-	header.Set("Sec-WebSocket-Protocol", "fido.cable")
+	// In caBLE v2, routing ID is 3 bytes and tunnel ID is 10 bytes (nonce)
+	// Let's try the correct Google caBLE service URL format
 	
-	dialer := &websocket.Dialer{
-		HandshakeTimeout: 10 * time.Second,
+	// Set up WebSocket connection according to Chromium caBLE specification
+	// The example shows: Dial(connectURL, nil) - no custom headers
+	
+	// Ensure tunnelURL doesn't have protocol prefix
+	domain := c.tunnelURL
+	if strings.HasPrefix(domain, "wss://") {
+		domain = strings.TrimPrefix(domain, "wss://")
 	}
+	if strings.HasPrefix(domain, "ws://") {
+		domain = strings.TrimPrefix(domain, "ws://")
+	}
+	
+	// Try multiple URL formats based on Chromium's caBLE implementation
+	routingIDHex := hex.EncodeToString(c.routingID)
+	tunnelIDHex := hex.EncodeToString(c.tunnelID)
+	
+	// Also try base64 encoding (URL-safe)
+	routingIDB64 := base64.URLEncoding.EncodeToString(c.routingID)
+	tunnelIDB64 := base64.URLEncoding.EncodeToString(c.tunnelID)
+	
+	log.Printf("Constructing WebSocket URL:")
+	log.Printf("  Domain: %s", domain)
+	log.Printf("  Routing ID (3 bytes): %x", c.routingID)
+	log.Printf("  Tunnel ID (16 bytes): %x", c.tunnelID)
+	log.Printf("  Routing ID (hex): %s", routingIDHex)
+	log.Printf("  Tunnel ID (hex): %s", tunnelIDHex)
+	log.Printf("  Routing ID (base64): %s", routingIDB64)
+	log.Printf("  Tunnel ID (base64): %s", tunnelIDB64)
+	
+	// According to Chromium caBLE specification:
+	// "In order to request a connection to a given tunnel ID, the path of the WebSockets URL is set to 
+	// /cable/connect/ followed by the lower-case, hex-encoded routing ID, another foreslash, 
+	// then the lower-case, hex-encoded tunnel ID."
+	connectURL := fmt.Sprintf("wss://%s/cable/connect/%s/%s", domain, routingIDHex, tunnelIDHex)
+	
+	log.Printf("Using Chromium caBLE specification URL format:")
+	log.Printf("  URL: %s", connectURL)
+	
+	// Focus on the official Chromium specification format only
+	urlPatterns := []string{
+		// Pattern 1: Official Chromium specification format
+		connectURL,
+	}
+	
+	log.Printf("Will try %d different URL patterns:", len(urlPatterns))
+	for i, url := range urlPatterns {
+		log.Printf("  Pattern %d: %s", i+1, url)
+	}
+	
+	// Try each pattern
+	for i, WSURL := range urlPatterns {
+		log.Printf("Attempting connection with pattern %d: %s", i+1, WSURL)
+		
+		if conn, err := c.attemptConnection(ctx, WSURL); err == nil {
+			log.Printf("Connection successful with pattern %d!", i+1)
+			return conn, nil
+		} else {
+			log.Printf("Pattern %d failed: %v", i+1, err)
+		}
+	}
+	
+	return nil, fmt.Errorf("all connection patterns failed")
+}
 
-	conn, _, err := dialer.Dial(WSURL, header)
+// attemptConnection tries to connect to a specific WebSocket URL
+func (c *Client) attemptConnection(ctx context.Context, wsURL string) (*Connection, error) {
+	log.Printf("WebSocket connection attempt:")
+	log.Printf("  URL: %s", wsURL)
+	
+	// Match Chromium specification exactly - no custom headers, only subprotocol
+	dialer := &websocket.Dialer{
+		Subprotocols: []string{"fido.cable"},
+	}
+	
+	log.Printf("  Subprotocols: %v", dialer.Subprotocols)
+	log.Printf("Attempting WebSocket connection...")
+	conn, resp, err := dialer.Dial(wsURL, nil)
 	if err != nil {
+		log.Printf("WebSocket connection failed:")
+		log.Printf("  Error: %v", err)
+		if resp != nil {
+			log.Printf("  HTTP Status: %s", resp.Status)
+			log.Printf("  HTTP Status Code: %d", resp.StatusCode)
+			log.Printf("  Response Headers:")
+			for k, v := range resp.Header {
+				log.Printf("    %s: %v", k, v)
+			}
+			
+			// Read response body for detailed error information
+			if resp.Body != nil {
+				body, bodyErr := io.ReadAll(resp.Body)
+				resp.Body.Close()
+				if bodyErr == nil && len(body) > 0 {
+					log.Printf("  Response Body (%d bytes):", len(body))
+					// Print first 1000 characters to avoid excessive logging
+					bodyStr := string(body)
+					if len(bodyStr) > 1000 {
+						bodyStr = bodyStr[:1000] + "... (truncated)"
+					}
+					log.Printf("    %s", bodyStr)
+				} else if bodyErr != nil {
+					log.Printf("  Failed to read response body: %v", bodyErr)
+				}
+			}
+		}
 		return nil, fmt.Errorf("failed to connect to tunnel service: %w", err)
+	}
+	
+	log.Printf("WebSocket connection successful!")
+	if resp != nil {
+		log.Printf("  HTTP Status: %s", resp.Status)
+		log.Printf("  Response Headers:")
+		for k, v := range resp.Header {
+			log.Printf("    %s: %v", k, v)
+		}
 	}
 
 	c.conn = conn
@@ -255,6 +383,9 @@ func (c *Connection) ReadMessage() ([]byte, error) {
 		return nil, fmt.Errorf("connection not established")
 	}
 
+	// Set read deadline for timeout
+	c.conn.SetReadDeadline(time.Now().Add(10 * time.Second))
+
 	_, encryptedMessage, err := c.conn.ReadMessage()
 	if err != nil {
 		return nil, fmt.Errorf("failed to read message: %w", err)
@@ -329,8 +460,12 @@ func (c *Client) GetTunnelInfo() (string, string, string) {
 	return c.tunnelURL, routingIDHex, tunnelIDHex
 }
 
-// SetTunnelInfo updates tunnel connection information from BLE advertisement
-func (c *Client) SetTunnelInfo(routingID, tunnelID []byte) {
+// SetTunnelInfo updates routing ID from BLE advertisement
+// Note: tunnelID is derived from QR secret and should not be overwritten
+func (c *Client) SetTunnelInfo(routingID, connectionNonce []byte) {
 	c.routingID = routingID
-	c.tunnelID = tunnelID
+	// connectionNonce is the nonce from BLE advertisement - we don't use it for tunnel ID
+	// The tunnel ID was already correctly derived from QR secret in NewClient
+	log.Printf("Updated routing ID from BLE advertisement: %x", routingID)
+	log.Printf("Connection nonce from BLE: %x (not used for tunnel ID)", connectionNonce)
 }

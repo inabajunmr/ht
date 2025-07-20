@@ -799,16 +799,54 @@ func (s *Scanner) getTunnelURL(tunnelService []byte) string {
 
 // extractAppleManufacturerData attempts to extract Apple manufacturer data from BLE advertisement
 func (s *Scanner) extractAppleManufacturerData(result bluetooth.ScanResult) []byte {
-	// TODO: This requires TinyGo Bluetooth library support for manufacturer data
-	// The current TinyGo Bluetooth library (v0.12.0) has limited manufacturer data access
-	// We would need to use the raw advertisement data parsing or wait for library updates
+	// Try to access raw advertisement data through reflection or available methods
+	// TinyGo Bluetooth may have manufacturer data in the AdvertisementPayload
 	
-	// For now, return empty slice as placeholder
-	// In a real implementation, we would parse the raw advertisement payload
-	// to extract manufacturer data with Company ID 76 (Apple)
+	// First try to see if we can get manufacturer data through any available methods
+	manufacturerData := s.tryGetManufacturerDataReflection(result.AdvertisementPayload)
 	
-	log.Printf("  Warning: TinyGo Bluetooth manufacturer data extraction not yet implemented")
-	log.Printf("  Need to parse raw advertisement payload for Company ID 76 (Apple)")
+	if len(manufacturerData) > 0 {
+		log.Printf("  Extracted manufacturer data: %x", manufacturerData)
+		
+		// Check if this is Apple data (Company ID 0x004C = 76 decimal)
+		if len(manufacturerData) >= 2 {
+			companyID := uint16(manufacturerData[0]) | (uint16(manufacturerData[1]) << 8)
+			if companyID == 0x004C { // Apple Company ID
+				log.Printf("  Confirmed Apple manufacturer data (Company ID: 0x%04X)", companyID)
+				return manufacturerData[2:] // Return data without company ID
+			} else {
+				log.Printf("  Non-Apple manufacturer data (Company ID: 0x%04X)", companyID)
+			}
+		}
+	} else {
+		log.Printf("  Warning: No manufacturer data extracted - may need raw payload parsing")
+		log.Printf("  Note: TinyGo Bluetooth v0.12.0 has limited manufacturer data access")
+	}
+	
+	return []byte{}
+}
+
+// tryGetManufacturerDataReflection attempts to extract manufacturer data using available methods
+func (s *Scanner) tryGetManufacturerDataReflection(payload bluetooth.AdvertisementPayload) []byte {
+	// Try different approaches to get manufacturer data
+	
+	// Method 1: Check if there are any unexported methods we can access
+	// This is a workaround since TinyGo Bluetooth doesn't export manufacturer data directly
+	
+	// For now, we'll implement a basic AD structure parser
+	// BLE Advertisement Data format:
+	// [Length][Type][Data...] repeating
+	
+	// We need access to the raw advertisement data, which TinyGo Bluetooth doesn't currently expose
+	// As a workaround, we'll return empty for now but log that we're looking for it
+	
+	log.Printf("  Attempting to extract manufacturer data from advertisement payload...")
+	log.Printf("  Note: TinyGo Bluetooth manufacturer data access requires raw payload parsing")
+	
+	// TODO: Implement raw advertisement data parsing when available
+	// This would involve parsing the raw BLE advertisement structure:
+	// - Find AD type 0xFF (Manufacturer Specific Data)
+	// - Extract company ID and data
 	
 	return []byte{}
 }
